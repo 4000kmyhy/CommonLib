@@ -46,6 +46,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             AutoMixActivity.actionStart(context)
         }) {
             Text(text = "Hello $name!")
+
         }
     }
 }
