@@ -457,13 +457,13 @@ private fun BtnAddMusic(
     )
 }
 
-@Preview(name = "home", device = "spec:shape=Normal,width=640,height=360,unit=dp,dpi=480")
+@Preview(name = "home", device = "spec:width=640dp,height=360dp,dpi=480")
 @Composable
 private fun AutoMixHomePreview() {
     AutoMixHome(HomeState(uiState = remember { mutableIntStateOf(1) }))
 }
 
-@Preview(name = "no permission", device = "spec:shape=Normal,width=640,height=360,unit=dp,dpi=480")
+@Preview(name = "no permission", device = "spec:width=640dp,height=360dp,dpi=480")
 @Composable
 private fun AutoMixHomePreview2() {
     AutoMixHome(HomeState(uiState = remember { mutableIntStateOf(0) }))
