@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stop_auto_mix">停止自动混音</string>
+
+    <string name="storage_permission_msg">读取和写入媒体文件需要访问存储权限。</string>
+    <string name="authorize">授权</string>
+
+    <string name="settings">设置</string>
+    <string name="disable_transition">转换期间禁止切换</string>
+
+    <string name="transition_duration">过渡时长</string>
+    <string name="transition_before_end">在结束前启用</string>
+    <string name="transition_sync">同步转换</string>
+    <string name="num_of_second">%s 秒</string>
+
+    <string name="am_close_reverse">开始自动混音，Reverse音效已关闭。</string>
+</resources>

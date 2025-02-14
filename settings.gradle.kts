@@ -23,4 +23,5 @@ rootProject.name = "CommonLib"
 include(":app")
 
 include(":lib_media")
+include(":lib_auto_mix")
  

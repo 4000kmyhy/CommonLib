@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="am_background">#282b2b</color>
+    <color name="am_text_color">#FFFFFF</color>
+    <color name="am_subtext_color">#80FFFFFF</color>
+    <color name="am_dialog_background">#30353A</color>
+    <color name="am_progress_background">#1D1D1D</color>
+
+    <color name="colorAccent">#FFD0BCFF</color>
+    <color name="colorAccentA">#FFD0BCFF</color>
+    <color name="colorAccentB">#FFD0BCFF</color>
+</resources>
