@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="eq_custom">Custom</string>
+
+    <!--  QQ音乐  -->
+    <string-array name="eq_preset_name">
+        <item>Flat</item>
+        <item>Pop</item>
+        <item>Dance</item>
+        <item>R&amp;B</item>
+        <item>Classical</item>
+        <item>Jazz</item>
+        <item>Slow</item>
+        <item>Electronic</item>
+        <item>Rock</item>
+        <item>Village</item>
+    </string-array>
+
+    <string-array name="eq_preset_value">
+        <!--Flat-->
+        <item>[0,0,0,0,0,0,0,0,0,0]</item>
+        <!--Pop-->
+        <item>[4,2,0,-3,-6,-6,-3,0,1,3]</item>
+        <!--Dance-->
+        <item>[7,6,3,0,0,-4,-6,-6,0,0]</item>
+        <!--R&B-->
+        <item>[3,6,8,3,-2,0,4,7,9,10]</item>
+        <!--Classical-->
+        <item>[0,0,0,0,0,0,-6,-6,-6,-8]</item>
+        <!--Jazz-->
+        <item>[0,0,0,5,5,5,0,3,4,5]</item>
+        <!--Slow-->
+        <item>[5,4,2,0,-2,0,3,6,7,8]</item>
+        <!--Electronic-->
+        <item>[6,5,0,-5,-4,0,6,8,8,7]</item>
+        <!--Rock-->
+        <item>[7,4,-4,7,-2,1,5,7,9,9]</item>
+        <!--Village-->
+        <item>[5,6,2,-5,1,1,-5,3,8,5]</item>
+    </string-array>
+
+    <string-array name="equalizer_preset_name">
+        <item>Flat</item>
+        <item>Classical</item>
+        <item>Club</item>
+        <item>Dance</item>
+        <item>Full Bass</item>
+        <item>Full Bass &amp; Treble</item>
+        <item>Full Treble</item>
+        <item>Headphones</item>
+        <item>Large Hall</item>
+        <item>Live</item>
+        <item>Party</item>
+        <item>Pop</item>
+        <item>Reggae</item>
+        <item>Rock</item>
+        <item>Ska</item>
+        <item>Soft</item>
+        <item>Soft Rock</item>
+        <item>Techno</item>
+    </string-array>
+
+    <string-array name="equalizer_preset_value">
+        <!--Flat-->
+        <item>[0,0,0,0,0,0,0,0,0,0]</item>
+        <!--Classical-->
+        <item>[0,0,0,0,0,0,-5,-5,-5,-6]</item>
+        <!--Club-->
+        <item>[0,0,4,3,3,3,2,0,0,0]</item>
+        <!--Dance-->
+        <item>[6,4,1,0,0,-3,-4,-4,0,0]</item>
+        <!--Full Bass-->
+        <item>[-5,6,6,3,1,-3,-5,-6,-6,-6]</item>
+        <!--Full Bass & Treble-->
+        <item>[4,3,0,-5,-3,1,5,6,7,7]</item>
+        <!--Full Treble-->
+        <item>[-6,-6,-6,-3,1,6,9,9,9,10]</item>
+        <!--Headphones-->
+        <item>[3,7,3,-2,-1,1,3,6,8,9]</item>
+        <!--Large Hall-->
+        <item>[6,6,3,3,0,-3,-3,-3,0,0]</item>
+        <!--Live-->
+        <item>[-3,0,2,3,3,3,2,1,1,1]</item>
+        <!--Party-->
+        <item>[4,4,0,0,0,0,0,0,4,4]</item>
+        <!--Pop-->
+        <item>[-1,3,4,5,3,0,-2,-2,-1,-1]</item>
+        <!--Reggae-->
+        <item>[0,0,0,-4,0,4,4,0,0,0]</item>
+        <!--Rock-->
+        <item>[5,3,-4,-5,-2,2,5,6,6,6]</item>
+        <!--Ska-->
+        <item>[-1,-3,-2,0,2,3,5,6,7,5]</item>
+        <!--Soft-->
+        <item>[3,1,0,-2,0,2,5,6,7,8]</item>
+        <!--Soft Rock-->
+        <item>[2,2,1,0,-3,-4,-2,0,1,5]</item>
+        <!--Techno-->
+        <item>[5,3,0,-4,-3,0,5,6,6,5]</item>
+    </string-array>
+</resources>

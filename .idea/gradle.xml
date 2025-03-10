@@ -10,8 +10,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api-lyric" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_2048" />
             <option value="$PROJECT_DIR$/lib_auto_mix" />
+            <option value="$PROJECT_DIR$/lib_bass" />
+            <option value="$PROJECT_DIR$/lib_eq_preset" />
+            <option value="$PROJECT_DIR$/lib_lyric" />
             <option value="$PROJECT_DIR$/lib_media" />
           </set>
         </option>

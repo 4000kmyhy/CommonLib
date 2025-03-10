@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseLyricView">
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcDefaultColor" format="reference|color" />
+        <attr name="lrcCurrentColor" format="reference|color" />
+        <attr name="lrcLightColor" format="reference|color" />
+        <attr name="lrcEmptyColor" format="reference|color" />
+        <attr name="lrcEmptyText" format="string" />
+        <attr name="lrcLoadingText" format="string" />
+        <attr name="lrcGravity">
+            <flag name="center" value="0" />
+            <flag name="start" value="1" />
+            <flag name="end" value="2" />
+        </attr>
+        <attr name="lrcAutoBind" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoLyricView">
+        <attr name="lrcLines" format="integer" />
+        <attr name="lrcShowStroke" format="boolean" />
+        <attr name="lrcTextBold" format="boolean" />
+        <attr name="lrcWrapHeight" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LyricView">
+        <attr name="lrcCurrentTextSize" format="dimension" />
+        <attr name="lrcCurrentLineBias" format="float" />
+        <attr name="lrcCenterLineType">
+            <flag name="none" value="-1" />
+            <flag name="center" value="0" />
+            <flag name="start" value="1" />
+            <flag name="end" value="2" />
+        </attr>
+        <attr name="lrcFadeEdge" format="boolean" />
+        <attr name="lrcCurrentTextFake" format="boolean" />
+    </declare-styleable>
+</resources>

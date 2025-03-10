@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="lyric_default">#80ffffff</color>
+    <color name="lyric_current">#ffffff</color>
+    <color name="lyric_light">#FFA040</color>
+    <color name="lyric_stroke">#000000</color>
+    <color name="lyric_desktop_default">#CCFFFFFF</color>
+    <color name="lyric_desktop_bg">#4D000000</color>
+
+    <color name="lyric_color_01">#FFA040</color>
+    <color name="lyric_color_02">#80FF00</color>
+    <color name="lyric_color_03">#55AAFF</color>
+    <color name="lyric_color_04">#FF68B4</color>
+    <color name="lyric_color_05">#CC99FF</color>
+</resources>

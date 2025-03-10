@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="max_score">最高分</string>
+    <string name="current_score">分数</string>
+    <string name="press_anywhere_to_stop">点击任意位置停止AI</string>
+    <string name="stopped">已停止AI</string>
+
+    <string name="undo_times_increase">撤回次数+3</string>
+</resources>

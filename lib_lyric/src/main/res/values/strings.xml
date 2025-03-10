@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lyric_no_find">Lyrics not found</string>
+    <string name="lyric_loading">Lyrics loading…</string>
+
+    <string name="lyric_lock_msg">Desktop lyrics are locked and can be unlocked in the dropdown notification bar</string>
+</resources>

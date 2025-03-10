@@ -16,6 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            setUrl("https://jitpack.io")
+            isAllowInsecureProtocol = true
+        }
     }
 }
 
@@ -24,4 +28,9 @@ include(":app")
 
 include(":lib_media")
 include(":lib_auto_mix")
+include(":lib_bass")
+include(":lib_eq_preset")
+include(":lib_lyric")
+include(":api-lyric")
+include(":lib_2048")
  

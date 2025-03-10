@@ -67,5 +67,5 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.navigation)
 
-    implementation(project(":lib_media"))
+    api(project(":lib_media"))
 }

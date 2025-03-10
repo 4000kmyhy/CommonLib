@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lyric_no_find">未找到歌词</string>
+    <string name="lyric_loading">歌词加载中…</string>
+
+    <string name="lyric_lock_msg">桌面歌词已锁定，可以下拉通知栏解锁</string>
+</resources>

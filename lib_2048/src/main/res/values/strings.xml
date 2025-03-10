@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="max_score">Max Score</string>
+    <string name="current_score">Score</string>
+    <string name="press_anywhere_to_stop">Touch anywhere to stop AI.</string>
+    <string name="stopped">AI stopped.</string>
+    
+    <string name="undo_times_increase">Undo times +3</string>
+</resources>
