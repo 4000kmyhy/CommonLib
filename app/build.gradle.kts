@@ -57,13 +57,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-//    implementation(project(":lib_auto_mix"))
-    implementation("com.github.4000kmyhy.CommonLib:lib_media:1.0.5")
-    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.5")
-
+    implementation(project(":lib_auto_mix"))
     implementation(project(":lib_2048"))
     implementation(project(":lib_bass"))
     implementation(project(":lib_eq_preset"))
     implementation(project(":lib_lyric"))
 
+//    implementation("com.github.4000kmyhy.CommonLib:lib_media:1.0.5")
+//    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.5")
 }
