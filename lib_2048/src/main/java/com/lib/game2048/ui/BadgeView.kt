@@ -45,14 +45,14 @@ class BadgeView @JvmOverloads constructor(
         paint.textSize = textSize
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         paint.color = bgColor
-        canvas?.drawCircle(0.5f * width, 0.5f * height, 0.5f * width, paint)
+        canvas.drawCircle(0.5f * width, 0.5f * height, 0.5f * width, paint)
 
         if (valueText.isNotEmpty()) {
             paint.color = textColor
-            canvas?.drawText(
+            canvas.drawText(
                 valueText,
                 0.5f * width,
                 0.5f * (height - (paint.descent() + paint.ascent())),
