@@ -352,10 +352,7 @@ object LyricUtils {
      * 字符串写入文件
      */
     fun writeToFile(targetFile: File, lyric: String) {
-        val dir = targetFile.getParentFile()
-        if (dir != null && !dir.exists()) {
-            dir.mkdirs()
-        }
+        targetFile.mkdirs()
         if (targetFile.exists()) {
             targetFile.delete()
         }
