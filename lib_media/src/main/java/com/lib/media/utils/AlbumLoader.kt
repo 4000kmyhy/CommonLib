@@ -55,13 +55,13 @@ object AlbumLoader {
         when (sortOrder) {
             SortOrder.AlbumSortOrder.ALBUM_A_Z -> {
                 albumList.sortBy {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 
             SortOrder.AlbumSortOrder.ALBUM_Z_A -> {
                 albumList.sortByDescending {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 

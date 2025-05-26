@@ -254,13 +254,13 @@ object MusicLoader {
         when (sortOrder) {
             SortOrder.MusicSortOrder.TITLE_A_Z -> {
                 musicList?.sortBy {
-                    it.title
+                    it.name.lowercase()
                 }
             }
 
             SortOrder.MusicSortOrder.TITLE_Z_A -> {
                 musicList?.sortByDescending {
-                    it.title
+                    it.name.lowercase()
                 }
             }
 

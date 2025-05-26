@@ -170,7 +170,7 @@ object LyricUtils {
     fun parseLyricByString(lyric: String?): MutableList<LyricBean> {
         val lyricList = ArrayList<LyricBean>()
         if (lyric.isNullOrEmpty()) return lyricList
-        val array = lyric.split("\\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val array = lyric.split("\\n".toRegex())
         for (line in array) {
             val list = parseLine(line)
             if (!list.isNullOrEmpty()) {

@@ -15,9 +15,12 @@
             <option value="$PROJECT_DIR$/lib_2048" />
             <option value="$PROJECT_DIR$/lib_auto_mix" />
             <option value="$PROJECT_DIR$/lib_bass" />
+            <option value="$PROJECT_DIR$/lib_compose" />
             <option value="$PROJECT_DIR$/lib_eq_preset" />
             <option value="$PROJECT_DIR$/lib_lyric" />
             <option value="$PROJECT_DIR$/lib_media" />
+            <option value="$PROJECT_DIR$/lib_retrofit" />
+            <option value="$PROJECT_DIR$/lib_web_pic" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

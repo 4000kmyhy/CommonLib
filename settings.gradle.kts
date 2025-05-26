@@ -33,4 +33,6 @@ include(":lib_eq_preset")
 include(":lib_lyric")
 include(":api-lyric")
 include(":lib_2048")
- 
+include(":lib_retrofit")
+include(":lib_web_pic")
+include(":lib_compose")

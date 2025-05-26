@@ -53,13 +53,13 @@ object ArtistLoader {
         when (sortOrder) {
             SortOrder.ArtistSortOrder.ARTIST_A_Z -> {
                 artistList.sortBy {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 
             SortOrder.ArtistSortOrder.ARTIST_Z_A -> {
                 artistList.sortByDescending {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 

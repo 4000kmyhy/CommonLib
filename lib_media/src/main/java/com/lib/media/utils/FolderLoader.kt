@@ -57,13 +57,13 @@ object FolderLoader {
         when (sortOrder) {
             SortOrder.FolderSortOrder.FOLDER_A_Z -> {
                 folderList.sortBy {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 
             SortOrder.FolderSortOrder.FOLDER_Z_A -> {
                 folderList.sortByDescending {
-                    it.name
+                    it.name.lowercase()
                 }
             }
 

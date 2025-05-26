@@ -16,6 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+        }
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -57,11 +61,28 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.navigation)
+    implementation(libs.androidx.runtime.android)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
+
+    implementation(libs.multidex)
+
+    implementation(libs.glide)
+    implementation(libs.glide.transformations)
+    implementation(libs.jsoup)
+
 //    implementation(project(":lib_auto_mix"))
 //    implementation(project(":lib_2048"))
 //    implementation(project(":lib_bass"))
 //    implementation(project(":lib_eq_preset"))
 //    implementation(project(":lib_lyric"))
+    implementation(project(":lib_retrofit"))
+    implementation(project(":lib_web_pic"))
 
     implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.0.8")
     implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.8")
