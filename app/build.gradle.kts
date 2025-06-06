@@ -84,8 +84,9 @@ dependencies {
     implementation(project(":lib_retrofit"))
     implementation(project(":lib_web_pic"))
 
-    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.0.8")
-    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.8")
-    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.0.8")
-    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.0.8")
+    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.0.9")
+    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.9")
+    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.0.9")
+    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.0.9")
+    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.0.9")
 }

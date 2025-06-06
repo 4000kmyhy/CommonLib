@@ -43,12 +43,10 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun BaseTheme(
+fun ComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
-    isLightStatusBars: Boolean = darkTheme,
-    isLightNavigationBars: Boolean = darkTheme,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -61,6 +59,26 @@ fun BaseTheme(
         else -> LightColorScheme
     }
 
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = Typography,
+        content = {
+            CompositionLocalProvider(value = LocalRippleTheme provides CustomRippleTheme) {
+                content()
+            }
+        }
+    )
+}
+
+@Composable
+fun BaseTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    // Dynamic color is available on Android 12+
+    dynamicColor: Boolean = true,
+    isLightStatusBars: Boolean = darkTheme,
+    isLightNavigationBars: Boolean = darkTheme,
+    content: @Composable () -> Unit
+) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
@@ -80,14 +98,10 @@ fun BaseTheme(
         }
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = {
-            CompositionLocalProvider(value = LocalRippleTheme provides CustomRippleTheme) {
-                content()
-            }
-        }
+    ComposeTheme(
+        darkTheme = darkTheme,
+        dynamicColor = dynamicColor,
+        content = content
     )
 }
 

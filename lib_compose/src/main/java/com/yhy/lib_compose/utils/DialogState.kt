@@ -15,7 +15,7 @@ import androidx.compose.runtime.setValue
 @Composable
 fun rememberDialogState() = remember { DialogState() }
 
-class DialogState {
+open class DialogState {
 
     companion object {
         @Composable

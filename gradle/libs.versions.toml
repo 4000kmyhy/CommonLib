@@ -32,6 +32,7 @@ okhttpLogging = "4.12.0"
 retrofit = "2.11.0"
 gson = "2.10.1"
 jsoup = "1.12.1"
+playServicesAds = "21.5.0"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -87,6 +88,7 @@ retrofit2 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofi
 retrofit2-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+play-services-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "playServicesAds" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

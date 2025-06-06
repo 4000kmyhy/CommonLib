@@ -10,11 +10,16 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.LayoutModifier
+import androidx.compose.ui.layout.Measurable
+import androidx.compose.ui.layout.MeasureResult
+import androidx.compose.ui.layout.MeasureScope
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.yhy.lib_compose.theme.BaseTheme
+import com.yhy.lib_compose.theme.ComposeTheme
 
 /**
  * desc:
@@ -42,6 +47,18 @@ fun Modifier.roundClickable(
     .clip(RoundedCornerShape(radius))
     .clickable(enabled = enabled, onClick = onClick)
 
+fun Modifier.isInvisible(value: Boolean) = if (value) this.then(Invisible) else this
+
+private object Invisible : LayoutModifier {
+    override fun MeasureScope.measure(
+        measurable: Measurable,
+        constraints: Constraints
+    ): MeasureResult {
+        val placeable = measurable.measure(constraints)
+        return layout(placeable.width, placeable.height) {}
+    }
+}
+
 fun ComponentActivity.addContent(content: @Composable () -> Unit) {
     ComposeView(this).apply {
         setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
@@ -57,7 +74,7 @@ private val DefaultActivityContentLayoutParams = ViewGroup.LayoutParams(
 
 fun ComponentActivity.showDialog(content: @Composable (onDismiss: () -> Unit) -> Unit) {
     addContent {
-        BaseTheme {
+        ComposeTheme {
             val dialogState = DialogState.build(content)
             DisposableEffect(Unit) {
                 dialogState.show()
@@ -71,7 +88,7 @@ fun ComponentActivity.showDialog(content: @Composable (onDismiss: () -> Unit) ->
 
 fun ComponentActivity.buildDialog(build: @Composable () -> DialogState) {
     addContent {
-        BaseTheme {
+        ComposeTheme {
             val dialogState = build()
             DisposableEffect(Unit) {
                 dialogState.show()

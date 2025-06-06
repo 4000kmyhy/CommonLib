@@ -253,7 +253,6 @@ class LyricView @JvmOverloads constructor(
                 if (dy + lyricLayout.height > top - mOffset - height * (mCurrentLineBias - 0.5f) &&
                     dy - lyricLayout.height < bottom - mOffset - height * (mCurrentLineBias - 0.5f)
                 ) { //在屏幕内才绘制
-
                     if (isTapLyric) { //点击改变歌词行，显示背景框
                         tapRect.set(
                             mPadding - tapPadding,
