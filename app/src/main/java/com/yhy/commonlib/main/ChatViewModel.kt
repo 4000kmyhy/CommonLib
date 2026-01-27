@@ -4,8 +4,6 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import com.yhy.commonlib.BuildConfig
-import com.yhy.commonlib.utils.SystemPrompt
 import com.yhy.lib_retrofit.entity.ChatMessage
 import com.yhy.lib_retrofit.service.GiteeAiApiService
 import kotlinx.coroutines.Dispatchers
@@ -46,7 +44,7 @@ class ChatViewModel : ViewModel() {
 
             GiteeAiApiService.request(
                 model = chatModel,
-                apiKey = BuildConfig.GITEE_API_KEY,
+                apiKey = "H9ONNXBJNKIANVLDQTSSKJVDBDPXDTT7PGRJU91K",
                 messages = conversationHistory.toList(),
                 onResponse = {
                     if (it.choices.isNotEmpty()) {

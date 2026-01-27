@@ -23,14 +23,14 @@ android {
         }
         multiDexEnabled = true
 
-        val localProperties = Properties().apply {
-            load(rootProject.file("local.properties").inputStream())
-        }
-        buildConfigField(
-            "String",
-            "GITEE_API_KEY",
-            localProperties.getProperty("GITEE_API_KEY")
-        )
+//        val localProperties = Properties().apply {
+//            load(rootProject.file("local.properties").inputStream())
+//        }
+//        buildConfigField(
+//            "String",
+//            "GITEE_API_KEY",
+//            localProperties.getProperty("GITEE_API_KEY")
+//        )
     }
 
     buildTypes {
