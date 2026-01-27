@@ -4,10 +4,11 @@ import android.app.Activity
 import android.os.Build
 import android.view.View
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material.ripple.RippleAlpha
-import androidx.compose.material.ripple.RippleTheme
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LocalRippleConfiguration
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RippleConfiguration
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -45,6 +46,7 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AutoMixTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -89,26 +91,23 @@ fun AutoMixTheme(
         }
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = {
-            CompositionLocalProvider(value = LocalRippleTheme provides CustomRippleTheme) {
-                content()
-            }
-        }
-    )
+    CompositionLocalProvider(value = LocalRippleConfiguration provides MyRippleConfiguration) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
 
-private object CustomRippleTheme : RippleTheme {
-    @Composable
-    override fun defaultColor() = Color(0x80DDDDDD)
 
-    @Composable
-    override fun rippleAlpha() = RippleAlpha(
+@OptIn(ExperimentalMaterial3Api::class)
+private val MyRippleConfiguration = RippleConfiguration(
+    color = Color(0x80DDDDDD),
+    rippleAlpha = RippleAlpha(
         0.5f,
         0.5f,
         0.5f,
         0.5f
     )
-}
+)
