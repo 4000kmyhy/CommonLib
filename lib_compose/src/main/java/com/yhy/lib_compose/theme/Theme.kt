@@ -2,11 +2,14 @@ package com.yhy.lib_compose.theme
 
 import android.app.Activity
 import android.os.Build
+import android.view.View
+import android.view.Window
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material.ripple.RippleAlpha
-import androidx.compose.material.ripple.RippleTheme
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LocalRippleConfiguration
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RippleConfiguration
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -19,6 +22,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -42,6 +46,7 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -59,15 +64,13 @@ fun ComposeTheme(
         else -> LightColorScheme
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = {
-            CompositionLocalProvider(value = LocalRippleTheme provides CustomRippleTheme) {
-                content()
-            }
-        }
-    )
+    CompositionLocalProvider(value = LocalRippleConfiguration provides MyRippleConfiguration) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
 
 @Composable
@@ -75,8 +78,8 @@ fun BaseTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
-    isLightStatusBars: Boolean = darkTheme,
-    isLightNavigationBars: Boolean = darkTheme,
+    isLightStatusBars: Boolean = !darkTheme,
+    isLightNavigationBars: Boolean = !darkTheme,
     content: @Composable () -> Unit
 ) {
     val view = LocalView.current
@@ -105,15 +108,30 @@ fun BaseTheme(
     )
 }
 
-private object CustomRippleTheme : RippleTheme {
-    @Composable
-    override fun defaultColor() = Color(0x80DDDDDD)
-
-    @Composable
-    override fun rippleAlpha() = RippleAlpha(
+@OptIn(ExperimentalMaterial3Api::class)
+private val MyRippleConfiguration = RippleConfiguration(
+    color = Color(0x80DDDDDD),
+    rippleAlpha = RippleAlpha(
         0.5f,
         0.5f,
         0.5f,
         0.5f
     )
+)
+
+fun setFullScreen(window: Window, isFullScreen: Boolean) {
+    val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
+    if (isFullScreen) {
+        val decorFitsFlags = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
+        val sysUiVis = window.decorView.systemUiVisibility
+        window.decorView.systemUiVisibility = sysUiVis or decorFitsFlags
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+    } else {
+        windowInsetsController.show(WindowInsetsCompat.Type.systemBars())
+    }
 }

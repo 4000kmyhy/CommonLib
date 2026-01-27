@@ -421,7 +421,9 @@ Java_com_lib_game2048_GameController_00024Companion_nativeGetBestMove(JNIEnv *en
         jintArray intArray = (jintArray) env->GetObjectArrayElement(grid, i);
         jint *elements = env->GetIntArrayElements(intArray, NULL);
         for (int j = 0; j < 4; j++) {
-            int powerVal = log2int(elements[j]);
+//            int powerVal = log2int(elements[j]);
+            int powerVal = elements[j];
+            if (powerVal > 15) powerVal = 15;
             board |= (uint64_t) (powerVal & 0xf) << ((i * 4 + j) * 4);
         }
         env->ReleaseIntArrayElements(intArray, elements, JNI_ABORT);

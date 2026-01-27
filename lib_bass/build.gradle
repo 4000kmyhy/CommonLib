@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.lib.bass'
-    compileSdk 34
+    compileSdk libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
         minSdk 23

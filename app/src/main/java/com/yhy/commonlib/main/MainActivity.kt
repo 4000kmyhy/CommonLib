@@ -1,9 +1,11 @@
 package com.yhy.commonlib.main
 
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
+import android.view.View
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Box
@@ -15,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.drawToBitmap
 import androidx.lifecycle.lifecycleScope
 import com.lib.automix.ui.AutoMixActivity
 import com.yhy.commonlib.R
@@ -22,15 +25,14 @@ import com.yhy.commonlib.ui.theme.CommonLibTheme
 import com.yhy.commonlib.utils.PermissionUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlin.io.encoding.Base64
-import kotlin.io.encoding.ExperimentalEncodingApi
+import java.io.File
+import java.io.FileOutputStream
 
 class MainActivity : ComponentActivity() {
 
     private val viewModel by viewModels<MainViewModel>()
     private var permissionUtils: PermissionUtils? = null
 
-    @OptIn(ExperimentalEncodingApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,10 +44,31 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 //        setContent {
 //            CommonLibTheme {
-//                MainNav(viewModel)
+////                MainNav(viewModel)
+////                ChatScreen()
+//                PlayScreen()
 //            }
 //        }
+
         setContentView(R.layout.activity_main)
+
+
+        val composeView = findViewById<View>(R.id.compose_view)
+        val text = findViewById<View>(R.id.text)
+
+        text.setOnClickListener {
+            val bitmap = composeView.drawToBitmap()
+            try {
+                val file =
+                    File( Environment.getExternalStorageDirectory().path+ "/Pictures", "screenshot_${System.currentTimeMillis()}.png")
+                FileOutputStream(file).use { out ->
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
+                }
+                Log.d("xxx", "onCreate: " + file.path)
+            } catch (e: Exception) {
+                Log.d("xxx", "onCreate: " + e)
+            }
+        }
 
         lifecycleScope.launch(Dispatchers.IO) {
 //            Log.d("xxx", "onCreate1: " + SearchApiService.search(w = "赵希予"))

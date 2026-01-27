@@ -12,7 +12,7 @@ class AnimationCell(
     private var timeElapsed: Long = 0
 
     fun tick(timeElapsed: Long) {
-        this.timeElapsed = this.timeElapsed + timeElapsed
+        this.timeElapsed += timeElapsed
     }
 
     fun animationDone(): Boolean {

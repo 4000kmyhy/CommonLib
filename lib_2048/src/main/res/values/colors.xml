@@ -3,4 +3,24 @@
     <color name="text_white_2048">#f9f6f2</color>
     <color name="text_black_2048">#776e65</color>
     <color name="bg_2048">#faf8ef</color>
+    <color name="rect_bg">#bbada0</color>
+
+    <color name="rect_0">#d6cdc4</color>
+    <color name="rect_2">#eee4da</color>
+    <color name="rect_4">#ede0c8</color>
+    <color name="rect_8">#f2b179</color>
+    <color name="rect_16">#f59563</color>
+    <color name="rect_32">#f67c5f</color>
+    <color name="rect_64">#f65e3b</color>
+    <color name="rect_128">#D7BE6F</color>
+    <color name="rect_256">#edcc61</color>
+    <color name="rect_512">#8BA411</color>
+    <color name="rect_1024">#4ECDE0</color>
+    <color name="rect_2048">#6E85EB</color>
+    <color name="rect_4096">#4B4BD5</color>
+    <color name="rect_8192">#4490F4</color>
+    <color name="rect_16384">#2B62B4</color>
+    <color name="rect_32768">#B341F0</color>
+    <color name="rect_65536">#86139B</color>
+    <color name="rect_131072">#000000</color>
 </resources>

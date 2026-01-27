@@ -47,7 +47,8 @@ data class KuwoData(val abslist: List<Data>) {
 
         fun getAlbumPicUrl(short: String, size: Int = 300): String {
             val index = short.indexOf('/')
-            return "$albumBaseUrl$size${short.substring(index)}"
+            val fileName = if (index >= 0) short.substring(index) else short
+            return "$albumBaseUrl$size$fileName"
         }
     }
 }

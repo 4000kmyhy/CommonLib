@@ -176,7 +176,7 @@ fun ColorPickerDialog(
                         Shader.TileMode.CLAMP
                     )
                     val verticalShader = LinearGradient(
-                        0f, 0f, 0f, size.height * heightScale,
+                        0f, 0f, 0f, size.height*heightScale,
                         Color(0xFFFFFFFF).toArgb(),
                         Color(0xFF000000).toArgb(),
                         Shader.TileMode.CLAMP
@@ -360,5 +360,10 @@ private fun DrawScope.drawAlphaPattern(rectangleSize: Float) {
 
 @OptIn(ExperimentalStdlibApi::class)
 fun Color.toHex(): String {
-    return this.toArgb().toHexString().uppercase()
+    return this.toArgb().toHexString(HexFormat {
+        upperCase = true
+        number {
+            prefix = "#"
+        }
+    })
 }

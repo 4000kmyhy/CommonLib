@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.dp
 
 @Stable
 fun Modifier.dialogBackground(
-    color: Color = BgDialog,
+    color: Color = DefBgDialog,
     radius: Dp = 15.dp
 ) = this.background(
     color = color,
@@ -28,7 +28,7 @@ fun Modifier.dialogBackground(
 
 @Stable
 fun Modifier.bottomSheetBackground(
-    color: Color = BgDialog,
+    color: Color = DefBgDialog,
     radius: Dp = 15.dp
 ) = this.background(
     color = color,

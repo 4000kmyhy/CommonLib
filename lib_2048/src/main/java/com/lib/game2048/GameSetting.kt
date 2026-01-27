@@ -78,22 +78,25 @@ class GameSetting {
 
         private const val KEY_IS_SOUND_ON = "KEY_IS_SOUND_ON"//是否开启音效
         private const val KEY_SQUARE_NUM = "KEY_SQUARE_NUM"//方块数量
-        private const val KEY_IS_SHOW_AI = "KEY_IS_SHOW_AI" // 显示AI
-        private const val KEY_IS_SHOW_CHEAT = "KEY_IS_SHOW_CHEAT" // 显示移除数字2
+        private const val KEY_IS_SHOW_AI = "KEY_IS_SHOW_AI" // 使用AI
+        private const val KEY_IS_SHOW_CHEAT = "KEY_IS_SHOW_CHEAT" // 使用移除数字2
         private const val KEY_ADD_TILE_NUM = "KEY_ADD_TILE_NUM"//每次移动增加数字数量
         private const val KEY_POG_2 = "KEY_POG_2"//生成数字2的概率
-        private const val KEY_LIMIT_UNDO_TIMES = "KEY_LIMIT_UNDO_TIMES" //限制撤回次数
+        private const val KEY_UNLIMITED_UNDO_TIMES = "KEY_UNLIMITED_UNDO_TIMES" //无限撤回次数
         private const val KEY_UNDO_ONCE = "KEY_LIMIT_UNDO_TIMES" //每次操作仅撤回一次
         private const val KEY_AI_INTERVAL_TIME = "KEY_AI_INTERVAL_TIME" //AI思考间隔
         private const val KEY_AI_DEPTH_LEVEL = "KEY_AI_DEPTH_LEVEL" //AI思考深度
+
+        private const val KEY_ADVANCED_SETTINGS = "KEY_ADVANCED_SETTINGS" //高级设置
+        private const val KEY_IS_HIDE_AI = "KEY_IS_HIDE_AI"//隐藏AI按钮
 
         private const val KEY_IS_LOCK_SQUARE_ = "KEY_IS_LOCK_SQUARE_"//是否锁住方块数
 
         fun isLock(context: Context?, num: Int): Boolean {
             return if (num > 4) {
-                return getSP(context, KEY_IS_LOCK_SQUARE_ + num, true) as Boolean
+                getSP(context, KEY_IS_LOCK_SQUARE_ + num, true) as Boolean
             } else {
-                return false
+                false
             }
         }
 
@@ -102,21 +105,19 @@ class GameSetting {
         }
     }
 
-    private var controller: GameController? = null
-
     var isSoundOn = true
         private set
     var squareNum = 4
         private set
-    var isShowAi = true
+    var isUseAi = false
         private set
-    var isShowCheat = true
+    var isUseCheat = false
         private set
     var addTileNum = 1
         private set
     var pog2 = 90
         private set
-    var limitUndoTimes = false
+    var unlimitedUndoTimes = false
         private set
     var undoOnce = false
         private set
@@ -126,20 +127,24 @@ class GameSetting {
     var depthLevel = 5
         private set
 
-    fun init(context: Context, controller: GameController) {
-        this.controller = controller
+    var isAdvancedSettings = false
+    var isHideAi = false
 
+    fun init(context: Context) {
         isSoundOn = getSP(context, KEY_IS_SOUND_ON, true) as Boolean
         squareNum = getSP(context, KEY_SQUARE_NUM, 4) as Int
-        isShowAi = getSP(context, KEY_IS_SHOW_AI, true) as Boolean
-        isShowCheat = getSP(context, KEY_IS_SHOW_CHEAT, true) as Boolean
+        isUseAi = getSP(context, KEY_IS_SHOW_AI, false) as Boolean
+        isUseCheat = getSP(context, KEY_IS_SHOW_CHEAT, false) as Boolean
         addTileNum = getSP(context, KEY_ADD_TILE_NUM, 1) as Int
         pog2 = getSP(context, KEY_POG_2, 90) as Int
-        limitUndoTimes = getSP(context, KEY_LIMIT_UNDO_TIMES, false) as Boolean
+        unlimitedUndoTimes = getSP(context, KEY_UNLIMITED_UNDO_TIMES, false) as Boolean
         undoOnce = getSP(context, KEY_UNDO_ONCE, false) as Boolean
 
         intervalTime = getSP(context, KEY_AI_INTERVAL_TIME, 100L) as Long
         depthLevel = getSP(context, KEY_AI_DEPTH_LEVEL, 5) as Int
+
+        isAdvancedSettings = getSP(context, KEY_ADVANCED_SETTINGS, false) as Boolean
+        isHideAi = getSP(context, KEY_IS_HIDE_AI, false) as Boolean
     }
 
     fun setSoundOn(context: Context?, b: Boolean) {
@@ -156,21 +161,17 @@ class GameSetting {
         }
     }
 
-    fun setShowAi(context: Context?, b: Boolean) {
-        if (isShowAi != b) {
-            isShowAi = b
+    fun setUseAi(context: Context?, b: Boolean) {
+        if (isUseAi != b) {
+            isUseAi = b
             setSP(context, KEY_IS_SHOW_AI, b)
-
-            controller?.updateAiVisible()
         }
     }
 
-    fun setShowCheat(context: Context?, b: Boolean) {
-        if (isShowCheat != b) {
-            isShowCheat = b
+    fun setUseCheat(context: Context?, b: Boolean) {
+        if (isUseCheat != b) {
+            isUseCheat = b
             setSP(context, KEY_IS_SHOW_CHEAT, b)
-
-            controller?.updateCheatVisible()
         }
     }
 
@@ -189,11 +190,9 @@ class GameSetting {
     }
 
     fun setLimitUndoTimes(context: Context?, b: Boolean) {
-        if (limitUndoTimes != b) {
-            limitUndoTimes = b
-            setSP(context, KEY_LIMIT_UNDO_TIMES, b)
-
-            controller?.updateUndoTimes()
+        if (unlimitedUndoTimes != b) {
+            unlimitedUndoTimes = b
+            setSP(context, KEY_UNLIMITED_UNDO_TIMES, b)
         }
     }
 
@@ -201,6 +200,13 @@ class GameSetting {
         if (undoOnce != b) {
             undoOnce = b
             setSP(context, KEY_UNDO_ONCE, b)
+        }
+    }
+
+    fun setHideAi(context: Context?, b: Boolean) {
+        if (isHideAi != b) {
+            isHideAi = b
+            setSP(context, KEY_IS_HIDE_AI, b)
         }
     }
 
@@ -215,6 +221,13 @@ class GameSetting {
         if (depthLevel != level) {
             depthLevel = level
             setSP(context, KEY_AI_DEPTH_LEVEL, level)
+        }
+    }
+
+    fun setAdvancedSettings(context: Context?, b: Boolean) {
+        if (isAdvancedSettings != b) {
+            isAdvancedSettings = b
+            setSP(context, KEY_ADVANCED_SETTINGS, b)
         }
     }
 }

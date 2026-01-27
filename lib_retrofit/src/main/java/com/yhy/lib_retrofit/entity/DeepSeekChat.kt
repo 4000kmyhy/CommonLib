@@ -6,7 +6,19 @@ package com.yhy.lib_retrofit.entity
  * user: xujj
  * time: 2025/5/12 10:40
  **/
-class DeepSeekChat {
+object DeepSeekChat {
+    fun analyzeJson(result: String): String {
+        var cleanedResult = result.trim()
+        if (cleanedResult.startsWith("```json")) {
+            cleanedResult = cleanedResult.substring(7).trim()
+        }
+        if (cleanedResult.endsWith("```")) {
+            cleanedResult = cleanedResult.substring(0, cleanedResult.length - 3).trim()
+        }
+        return cleanedResult
+    }
+
+    fun ChatMessage.getResult() = analyzeJson(content)
 }
 
 data class ChatMessage(

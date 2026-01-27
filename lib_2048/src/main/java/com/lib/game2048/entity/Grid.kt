@@ -1,5 +1,7 @@
 package com.lib.game2048.entity
 
+import com.lib.game2048.ui.GameView
+
 class Grid(sizeX: Int, sizeY: Int) {
 
     var field: Array<Array<Tile?>>
@@ -14,8 +16,8 @@ class Grid(sizeX: Int, sizeY: Int) {
         clearUndoList()
     }
 
-    fun getCellMatrix(): Array<IntArray> {
-        val tmp = Array(field.size) { IntArray(field[0].size) }
+    fun getCellMatrix(): Array<LongArray> {
+        val tmp = Array(field.size) { LongArray(field[0].size) }
         for (xx in field.indices) {
             for (yy in field[0].indices) {
                 tmp[xx][yy] = if (field[xx][yy] == null) 0 else field[xx][yy]!!.getValue()
@@ -24,10 +26,21 @@ class Grid(sizeX: Int, sizeY: Int) {
         return tmp
     }
 
+    fun getCellLog2(): Array<IntArray> {
+        val tmp = Array(field.size) { IntArray(field[0].size) }
+        for (xx in field.indices) {
+            for (yy in field[0].indices) {
+                tmp[xx][yy] =
+                    if (field[xx][yy] == null) 0 else GameView.log2(field[xx][yy]!!.getValue())
+            }
+        }
+        return tmp
+    }
+
     fun randomAvailableCell(): Cell? {
         val availableCells = getAvailableCells()
-        return if (availableCells.size >= 1) {
-            availableCells[Math.floor(Math.random() * availableCells.size).toInt()]
+        return if (availableCells.isNotEmpty()) {
+            availableCells.random()
         } else null
     }
 
@@ -132,12 +145,13 @@ class Grid(sizeX: Int, sizeY: Int) {
 
     fun revertTiles() {
         if (undoList.size <= 0) return
-        for (xx in undoList[undoList.size - 1].indices) {
-            for (yy in undoList[undoList.size - 1][0].indices) {
-                if (undoList[undoList.size - 1][xx][yy] == null) {
+        val tmpField = undoList[undoList.size - 1]
+        for (xx in tmpField.indices) {
+            for (yy in tmpField[0].indices) {
+                if (tmpField[xx][yy] == null) {
                     field[xx][yy] = null
                 } else {
-                    field[xx][yy] = Tile(xx, yy, undoList[undoList.size - 1][xx][yy]!!.getValue())
+                    field[xx][yy] = Tile(xx, yy, tmpField[xx][yy]!!.getValue())
                 }
             }
         }
@@ -154,5 +168,19 @@ class Grid(sizeX: Int, sizeY: Int) {
 
     fun clearUndoList() {
         undoList.clear()
+    }
+
+    fun revertTiles0() {
+        if (undoList.size <= 0) return
+        val tmpField = undoList[0]
+        for (xx in tmpField.indices) {
+            for (yy in tmpField[0].indices) {
+                if (tmpField[xx][yy] == null) {
+                    field[xx][yy] = null
+                } else {
+                    field[xx][yy] = Tile(xx, yy, tmpField[xx][yy]!!.getValue())
+                }
+            }
+        }
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.yhy.commonlib"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.yhy.commonlib"
-        minSdk = 23
-        targetSdk = 34
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -20,6 +22,15 @@ android {
             abiFilters += listOf("armeabi-v7a", "arm64-v8a")
         }
         multiDexEnabled = true
+
+        val localProperties = Properties().apply {
+            load(rootProject.file("local.properties").inputStream())
+        }
+        buildConfigField(
+            "String",
+            "GITEE_API_KEY",
+            localProperties.getProperty("GITEE_API_KEY")
+        )
     }
 
     buildTypes {
@@ -40,6 +51,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -75,6 +87,8 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.glide.transformations)
     implementation(libs.jsoup)
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.converter.gson)
 
 //    implementation(project(":lib_auto_mix"))
 //    implementation(project(":lib_2048"))
@@ -84,9 +98,9 @@ dependencies {
     implementation(project(":lib_retrofit"))
     implementation(project(":lib_web_pic"))
 
-    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.0.9")
-    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.0.9")
-    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.0.9")
-    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.0.9")
-    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.0.9")
+    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.1.1")
+    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.1.1")
+    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.1.1")
+    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.1.1")
+    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.1.1")
 }

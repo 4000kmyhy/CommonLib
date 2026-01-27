@@ -7,5 +7,5 @@ import com.yhy.lib_compose.theme.BaseTheme
 fun CommonLibTheme(
     content: @Composable () -> Unit
 ) {
-    BaseTheme(content = content)
+    BaseTheme(darkTheme = true, content = content)
 }

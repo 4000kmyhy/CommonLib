@@ -3,7 +3,12 @@ package com.yhy.lib_compose.view
 import android.content.Context
 import android.graphics.Outline
 import android.os.Build
-import android.view.*
+import android.view.ContextThemeWrapper
+import android.view.View
+import android.view.ViewGroup
+import android.view.ViewOutlineProvider
+import android.view.Window
+import android.view.WindowManager
 import androidx.activity.addCallback
 import androidx.activity.setViewTreeOnBackPressedDispatcherOwner
 import androidx.annotation.FloatRange
@@ -12,8 +17,19 @@ import androidx.annotation.Px
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionContext
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.Stable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCompositionContext
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
@@ -21,7 +37,12 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.Layout
-import androidx.compose.ui.platform.*
+import androidx.compose.ui.platform.AbstractComposeView
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.platform.ViewRootForInspector
+import androidx.compose.ui.platform.rememberNestedScrollInteropConnection
 import androidx.compose.ui.semantics.dialog
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.Density
@@ -36,10 +57,15 @@ import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.lifecycle.setViewTreeViewModelStoreOwner
 import androidx.savedstate.findViewTreeSavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
-import com.google.android.material.bottomsheet.BottomSheetBehavior.*
+import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
+import com.google.android.material.bottomsheet.BottomSheetBehavior.PEEK_HEIGHT_AUTO
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_COLLAPSED
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_HALF_EXPANDED
+import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_HIDDEN
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.yhy.lib_compose.R
-import java.util.*
+import java.util.UUID
 
 
 /**
@@ -397,6 +423,8 @@ private class BottomSheetDialogWrapper(
     init {
         val window = window ?: error("Dialog has no window")
         window.setBackgroundDrawableResource(android.R.color.transparent)
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        WindowCompat.setDecorFitsSystemWindows(window, false)
         bottomSheetDialogLayout = BottomSheetDialogLayout(context, window).apply {
             // Set unique id for AbstractComposeView. This allows state restoration for the state
             // defined inside the Dialog via rememberSaveable()
@@ -536,6 +564,19 @@ private class BottomSheetDialogWrapper(
         setNavigationBarProperties(properties.navigationBarProperties)
         setBehaviorProperties(properties.behaviorProperties)
         dismissWithAnimation = properties.dismissWithAnimation
+
+//        window?.setLayout(
+//            WindowManager.LayoutParams.MATCH_PARENT,
+//            WindowManager.LayoutParams.MATCH_PARENT,
+//        )
+//        window?.setSoftInputMode(
+//            if (Build.VERSION.SDK_INT >= 30) {
+//                WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING
+//            } else {
+//                @Suppress("DEPRECATION") WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+//            },
+//        )
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
     }
 
     fun disposeComposition() {

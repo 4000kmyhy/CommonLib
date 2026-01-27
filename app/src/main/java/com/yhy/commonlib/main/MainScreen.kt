@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -38,6 +39,7 @@ import com.yhy.commonlib.ui.dialog.buildColorPicker
 import com.yhy.commonlib.ui.theme.Purple80
 import com.yhy.commonlib.ui.view.GlideImage
 import com.yhy.lib_retrofit.service.DeepSeekApiService
+import com.yhy.lib_retrofit.service.GiteeAiApiService
 import com.yhy.lib_web_pic.utils.WebPicUtils
 import kotlinx.coroutines.launch
 
@@ -86,13 +88,14 @@ fun MainScreen(
             musicList?.let {
                 itemsIndexed(it, key = { index, item -> "$index ${item.uuid}" }) { index, item ->
                     MusicItem(item) {
-                        navigateToWaveform(item.data)
+//                        navigateToWaveform(item.data)
 //                        newList -= item
 
-//                        colorPickerDialogState.show()
-//                        scope.launch {
+                        colorPickerDialogState.show()
+                        scope.launch {
 //                            DeepSeekApiService.request(item.name + "-" + item.artist)
-//                        }
+//                            GiteeAiApiService.request("")
+                        }
                     }
                 }
             }

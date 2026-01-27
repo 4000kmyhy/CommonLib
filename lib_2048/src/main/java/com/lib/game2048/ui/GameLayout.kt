@@ -2,6 +2,7 @@ package com.lib.game2048.ui
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.lib.game2048.GameController
@@ -27,7 +28,7 @@ class GameLayout @JvmOverloads constructor(
 
     private var gameController: GameController? = null
 
-    fun bindController(controller: GameController) {
+    fun bindController(controller: GameController?) {
         gameController = controller
     }
 
@@ -54,6 +55,7 @@ class GameLayout @JvmOverloads constructor(
     private var hasMoved = false
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        Log.d("xxx", "onTouchEvent1: "+event)
         gameController?.let {
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {

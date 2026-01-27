@@ -5,8 +5,9 @@ import android.widget.Toast
 import com.lib.game2048.entity.AnimationGrid
 import com.lib.game2048.entity.Cell
 import com.lib.game2048.entity.Grid
+import com.lib.game2048.entity.MovedTiles
 import com.lib.game2048.entity.Tile
-import com.lib.game2048.ui.GameView
+import com.lib.game2048.entity.Tile.Companion.copy
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -15,18 +16,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.coroutines.CoroutineContext
 
-class GameController(private val context: Context, private val gameView: GameView) {
+class GameController(private val context: Context) {
 
     companion object {
+        const val BASE_ANIMATION_TIME: Long = 100000000
         const val SPAWN_ANIMATION = -1
         const val MOVE_ANIMATION = 0
         const val MERGE_ANIMATION = 1
         const val FADE_GLOBAL_ANIMATION = 0
-        const val MOVE_ANIMATION_TIME: Long = GameView.BASE_ANIMATION_TIME
-        const val SPAWN_ANIMATION_TIME: Long = GameView.BASE_ANIMATION_TIME
-        const val NOTIFICATION_ANIMATION_TIME: Long = GameView.BASE_ANIMATION_TIME * 5
+        const val MOVE_ANIMATION_TIME: Long = BASE_ANIMATION_TIME
+        const val SPAWN_ANIMATION_TIME: Long = BASE_ANIMATION_TIME
+        const val NOTIFICATION_ANIMATION_TIME: Long = BASE_ANIMATION_TIME * 5
         const val NOTIFICATION_DELAY_TIME = MOVE_ANIMATION_TIME + SPAWN_ANIMATION_TIME
         private const val GAME_LOST = -1
         private const val GAME_NORMAL = 0
@@ -48,23 +49,22 @@ class GameController(private val context: Context, private val gameView: GameVie
         private external fun nativeSetMaxDepth(depth: Int)
     }
 
-    interface OnScoreUpdatedListener {
+    interface OnControllerListener {
         fun onScoreUpdated(score: Long)
         fun onHighScoreUpdated(score: Long)
         fun onUndoTimesUpdated(times: Int)
-
-        fun onAiVisibleUpdated()
-
-        fun onCheatVisibleUpdated()
+        fun onAiStateUpdated(isRunning: Boolean)
     }
 
-    private var onScoreUpdatedListener: OnScoreUpdatedListener? = null
-
-    fun setOnScoreUpdatedListener(listener: OnScoreUpdatedListener) {
-        onScoreUpdatedListener = listener
+    interface OnViewUpdatedListener {
+        fun refreshLastTime()
+        fun updateSquareNum(num: Int)
+        fun resetFpsTime()
     }
 
     var isAIRunning = false
+        private set
+    var isBacktrackRunning = false
         private set
 
     private var squareNum = 4
@@ -74,7 +74,8 @@ class GameController(private val context: Context, private val gameView: GameVie
     private var gameState = 0
     private var score: Long = 0
     private var highScore: Long = 0
-    private val lastScore: MutableList<Long> = ArrayList()
+    private val lastScore = ArrayList<Long>()
+    private val movedList = ArrayList<MovedTiles>()//记录每次移动的方向和生成方块
     private var bufferScore: Long = 0
     private var timeMoved = 0
     private var hasMoved = false
@@ -83,19 +84,32 @@ class GameController(private val context: Context, private val gameView: GameVie
 
     private val soundPoolPlayer = SoundPoolPlayer(context, R.raw.sound)
 
+    private val gameScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     private var aiJob: Job? = null
-    private val aiScope: CoroutineScope = object : CoroutineScope {
-        override val coroutineContext: CoroutineContext
-            get() = SupervisorJob() + Dispatchers.Main
+    private var backtrackJob: Job? = null
+
+    private var onControllerListener: OnControllerListener? = null
+
+    fun setOnControllerListener(listener: OnControllerListener) {
+        onControllerListener = listener
+    }
+
+    private var onViewUpdatedListener: OnViewUpdatedListener? = null
+
+    fun setOnViewUpdatedListener(listener: OnViewUpdatedListener) {
+        onViewUpdatedListener = listener
+        //绑定view时刷新
+        onViewUpdatedListener?.refreshLastTime()
+        onViewUpdatedListener?.updateSquareNum(squareNum)
     }
 
     init {
-        GameSetting.getInstance().init(context, this)
         newGame()
     }
 
     fun newGame(num: Int = GameSetting.getInstance().squareNum) {
         stopAi()
+        stopBacktrack()
 
         squareNum = num
 
@@ -112,14 +126,16 @@ class GameController(private val context: Context, private val gameView: GameVie
 
         addStartTiles()
 
-        gameView.refreshLastTime = true
-        gameView.updateLayout(squareNum)
         lastScore.clear()
+        movedList.clear()
         timeMoved = 0
         hasMoved = false
 
-        onScoreUpdatedListener?.onScoreUpdated(score)
+        onControllerListener?.onScoreUpdated(score)
         resetUndoTimes()
+
+        onViewUpdatedListener?.refreshLastTime()
+        onViewUpdatedListener?.updateSquareNum(squareNum)
     }
 
     private fun addStartTiles(num: Int = 2) {
@@ -128,19 +144,27 @@ class GameController(private val context: Context, private val gameView: GameVie
         }
     }
 
-    private fun addRandomTile() {
-        if (grid.randomAvailableCell() != null) {
-            if (grid.isCellsAvailable()) {
-                val value = if (Math.random() < GameSetting.getInstance().pog2 / 100f) 2 else 4
-                val tile = Tile(grid.randomAvailableCell()!!, value)
-                spawnTile(tile)
-            }
+    private fun addRandomTile(): Tile? {
+        val cell = grid.randomAvailableCell()
+        if (cell != null) {
+            val value = if (Math.random() < GameSetting.getInstance().pog2 / 100f) 2L else 4L
+            val tile = Tile(cell, value)
+            spawnTile(tile)
+            return tile
         }
+        return null
     }
 
     private fun spawnTile(tile: Tile) {
         grid.insertTile(tile)
-        aGrid.startAnimation(tile.x, tile.y, SPAWN_ANIMATION, SPAWN_ANIMATION_TIME, MOVE_ANIMATION_TIME, null)
+        aGrid.startAnimation(
+            tile.x,
+            tile.y,
+            SPAWN_ANIMATION,
+            SPAWN_ANIMATION_TIME,
+            MOVE_ANIMATION_TIME,
+            null
+        )
     }
 
     private fun prepareTiles() {
@@ -171,7 +195,7 @@ class GameController(private val context: Context, private val gameView: GameVie
         prepareUndoState()
         for (cell in grid.getNotAvailableCells()) {
             tile = grid.getCellContent(cell)
-            if (tile != null && tile.getValue() == 2) {
+            if (tile != null && tile.getValue() == 2L) {
                 grid.removeTile(tile)
                 gameState = GAME_NORMAL
             }
@@ -180,8 +204,7 @@ class GameController(private val context: Context, private val gameView: GameVie
             addStartTiles()
         }
         saveUndoState()
-        gameView.resyncTime()
-        gameView.invalidate()
+        onViewUpdatedListener?.resetFpsTime()
     }
 
     private fun prepareUndoState() {
@@ -199,14 +222,14 @@ class GameController(private val context: Context, private val gameView: GameVie
             timeMoved--
             score = lastScore[lastScore.size - 1]
             lastScore.removeAt(lastScore.size - 1)
+            movedList.removeAt(movedList.size - 1)
             gameState = GAME_NORMAL
-            gameView.refreshLastTime = true
-            gameView.invalidate()
+            onViewUpdatedListener?.refreshLastTime()
 
-            onScoreUpdatedListener?.onScoreUpdated(score)
+            onControllerListener?.onScoreUpdated(score)
             if (undoTimes > 0) {
                 undoTimes--
-                onScoreUpdatedListener?.onUndoTimesUpdated(undoTimes)
+                onControllerListener?.onUndoTimesUpdated(undoTimes)
             }
         }
     }
@@ -216,7 +239,7 @@ class GameController(private val context: Context, private val gameView: GameVie
      */
     fun resetUndoTimes() {
         undoTimes = 3
-        onScoreUpdatedListener?.onUndoTimesUpdated(undoTimes)
+        onControllerListener?.onUndoTimesUpdated(undoTimes)
     }
 
     fun gameLost(): Boolean {
@@ -225,7 +248,7 @@ class GameController(private val context: Context, private val gameView: GameVie
 
     fun isGameActive(): Boolean = !gameLost()
 
-    fun move(direction: Int) {
+    fun move(direction: Int, tiles: List<Tile> = listOf()) {
         aGrid.cancelAnimations()
         // 0: up, 1: right, 2: down, 3: left
         if (!isGameActive()) {
@@ -265,7 +288,14 @@ class GameController(private val context: Context, private val gameView: GameVie
                             0,
                             extras
                         ) // Direction: 0 = MOVING MERGED
-                        aGrid.startAnimation(merged.x, merged.y, MERGE_ANIMATION, SPAWN_ANIMATION_TIME, MOVE_ANIMATION_TIME, null)
+                        aGrid.startAnimation(
+                            merged.x,
+                            merged.y,
+                            MERGE_ANIMATION,
+                            SPAWN_ANIMATION_TIME,
+                            MOVE_ANIMATION_TIME,
+                            null
+                        )
 
                         // Update the score
                         score += merged.getValue()
@@ -297,16 +327,28 @@ class GameController(private val context: Context, private val gameView: GameVie
             }
 //            if (!isAIRunning)
             saveUndoState()
-            for (i in 0 until GameSetting.getInstance().addTileNum) {
-                addRandomTile()
+
+            if (tiles.isEmpty()) {
+                val movedTiles = MovedTiles(direction)
+                for (i in 0 until GameSetting.getInstance().addTileNum) {
+                    val tile = addRandomTile()
+                    if (tile != null) {
+                        movedTiles.tiles.add(tile.copy())
+                    }
+                }
+                movedList.add(movedTiles)
+            } else {
+                tiles.forEach {
+                    spawnTile(it.copy())
+                }
             }
+
             checkLose()
         }
-        gameView.resyncTime()
-        gameView.invalidate()
+        onViewUpdatedListener?.resetFpsTime()
 
-        onScoreUpdatedListener?.onScoreUpdated(score)
-        onScoreUpdatedListener?.onHighScoreUpdated(highScore)
+        onControllerListener?.onScoreUpdated(score)
+        onControllerListener?.onHighScoreUpdated(highScore)
     }
 
     private fun checkLose() {
@@ -317,13 +359,20 @@ class GameController(private val context: Context, private val gameView: GameVie
     }
 
     private fun endGame() {
-        aGrid.startAnimation(-1, -1, FADE_GLOBAL_ANIMATION, NOTIFICATION_ANIMATION_TIME, NOTIFICATION_DELAY_TIME, null)
+        aGrid.startAnimation(
+            -1,
+            -1,
+            FADE_GLOBAL_ANIMATION,
+            NOTIFICATION_ANIMATION_TIME,
+            NOTIFICATION_DELAY_TIME,
+            null
+        )
         if (score >= highScore) {
             highScore = score
             GameSetting.getSharedPreferences(context).edit()
                 .putLong(KEY_HIGH_SCORE_ + "$squareNum", highScore)
                 .apply()
-            onScoreUpdatedListener?.onHighScoreUpdated(highScore)
+            onControllerListener?.onHighScoreUpdated(highScore)
         }
     }
 
@@ -404,17 +453,21 @@ class GameController(private val context: Context, private val gameView: GameVie
         if (squareNum < 4) return //4x4以上才能使用ai
 
         isAIRunning = true
-        Toast.makeText(context, R.string.press_anywhere_to_stop, Toast.LENGTH_SHORT).show()
+        if (!GameSetting.getInstance().isHideAi) {
+            Toast.makeText(context, R.string.press_anywhere_to_stop, Toast.LENGTH_SHORT).show()
+        }
+        onControllerListener?.onAiStateUpdated(isAIRunning)
 
         val intervalTime = GameSetting.getInstance().intervalTime//考虑时间
-        nativeSetMaxDepth(GameSetting.getInstance().depthLevel)//考虑深度
+        val depthLevel = GameSetting.getInstance().depthLevel//考虑深度
+        nativeSetMaxDepth(depthLevel)
 
         aiJob?.cancel()
-        aiJob = aiScope.launch(Dispatchers.Default) {
+        aiJob = gameScope.launch(Dispatchers.Default) {
             while (isAIRunning) {
                 if (!isActive) return@launch
                 if (isGameActive()) {
-                    val direction = nativeGetBestMove(grid.getCellMatrix())
+                    val direction = nativeGetBestMove(grid.getCellLog2())
                     withContext(Dispatchers.Main) {
                         move(direction)
                     }
@@ -432,31 +485,75 @@ class GameController(private val context: Context, private val gameView: GameVie
     fun stopAi() {
         if (isAIRunning) {
             isAIRunning = false
-            Toast.makeText(context, R.string.stopped, Toast.LENGTH_SHORT).show()
+            if (!GameSetting.getInstance().isHideAi) {
+                Toast.makeText(context, R.string.stopped, Toast.LENGTH_SHORT).show()
+            }
+            onControllerListener?.onAiStateUpdated(isAIRunning)
             aiJob?.cancel()
         }
     }
 
+    fun startBacktrack() {
+        aGrid.cancelAnimations()
+        grid.revertTiles0()
+
+        score = lastScore.getOrElse(0, { 0 })
+        gameState = GAME_NORMAL
+
+        lastScore.clear()
+        lastScore.add(score)
+        timeMoved = 0
+        hasMoved = false
+
+        onViewUpdatedListener?.refreshLastTime()
+
+        onControllerListener?.onScoreUpdated(score)
+        resetUndoTimes()//todo
+
+        val intervalTime = GameSetting.getInstance().intervalTime//考虑时间
+
+        backtrackJob?.cancel()
+        backtrackJob = gameScope.launch(Dispatchers.Default) {
+            isBacktrackRunning = true
+            delay(1000)
+            for (movedTiles in movedList) {
+                if (!isActive) return@launch
+                withContext(Dispatchers.Main) {
+                    move(movedTiles.direction, movedTiles.tiles)
+                }
+                delay(intervalTime)
+            }
+            isBacktrackRunning = false
+        }
+    }
+
+    fun stopBacktrack(): Boolean {
+        if (isBacktrackRunning) {
+            isBacktrackRunning = false
+            backtrackJob?.cancel()
+            return true
+        }
+        return false
+    }
+
     fun save() {
-        if (score > 0) {//有分数才保存
-            val settings = GameSetting.getSharedPreferences(context)
-            val editor = settings.edit()
-            val field: Array<Array<Tile?>> = grid.field
-            for (xx in field.indices) {
-                for (yy in field[0].indices) {
-                    if (field[xx][yy] != null) {
-                        editor.putInt("Cell$squareNum($xx,$yy)", field[xx][yy]!!.getValue())
-                    } else {
-                        editor.putInt("Cell$squareNum($xx,$yy)", 0)
-                    }
+        val settings = GameSetting.getSharedPreferences(context)
+        val editor = settings.edit()
+        val field: Array<Array<Tile?>> = grid.field
+        for (xx in field.indices) {
+            for (yy in field[0].indices) {
+                if (field[xx][yy] != null) {
+                    editor.putLong("Cell_$squareNum($xx,$yy)", field[xx][yy]!!.getValue())
+                } else {
+                    editor.putLong("Cell_$squareNum($xx,$yy)", 0L)
                 }
             }
-            editor.putLong(KEY_SCORE_ + "$squareNum", score)
-            editor.putInt(KEY_GAME_STATE_ + "$squareNum", gameState)
-            editor.putLong(KEY_HIGH_SCORE_ + "$squareNum", highScore)
-            editor.putInt(KEY_UNDO_TIMES_ + "$squareNum", undoTimes)
-            editor.apply()
         }
+        editor.putLong(KEY_SCORE_ + "$squareNum", score)
+        editor.putInt(KEY_GAME_STATE_ + "$squareNum", gameState)
+        editor.putLong(KEY_HIGH_SCORE_ + "$squareNum", highScore)
+        editor.putInt(KEY_UNDO_TIMES_ + "$squareNum", undoTimes)
+        editor.apply()
     }
 
     fun load() {
@@ -465,17 +562,17 @@ class GameController(private val context: Context, private val gameView: GameVie
         val settings = GameSetting.getSharedPreferences(context)
 
         score = settings.getLong(KEY_SCORE_ + "$squareNum", 0)
-        onScoreUpdatedListener?.onScoreUpdated(score)
+        onControllerListener?.onScoreUpdated(score)
 
         if (score > 0) { //有分数才加载
             lastScore.add(score)
             gameState = settings.getInt(KEY_GAME_STATE_ + "$squareNum", GAME_NORMAL)
             for (xx in 0 until grid.field.size) {
                 for (yy in 0 until grid.field.get(0).size) {
-                    val value = settings.getInt("Cell$squareNum($xx,$yy)", -1)
+                    val value = settings.getLong("Cell_$squareNum($xx,$yy)", 0L)
                     if (value > 0) {
                         grid.field[xx][yy] = Tile(xx, yy, value)
-                    } else if (value == 0) {
+                    } else if (value == 0L) {
                         grid.field[xx][yy] = null
                     }
                 }
@@ -483,21 +580,28 @@ class GameController(private val context: Context, private val gameView: GameVie
         }
 
         highScore = settings.getLong(KEY_HIGH_SCORE_ + "$squareNum", 0)
-        onScoreUpdatedListener?.onHighScoreUpdated(highScore)
+        onControllerListener?.onHighScoreUpdated(highScore)
 
         undoTimes = settings.getInt(KEY_UNDO_TIMES_ + "$squareNum", 3)
-        onScoreUpdatedListener?.onUndoTimesUpdated(undoTimes)
+        onControllerListener?.onUndoTimesUpdated(undoTimes)
     }
 
-    fun updateUndoTimes() {
-        onScoreUpdatedListener?.onUndoTimesUpdated(undoTimes)
-    }
-
-    fun updateAiVisible() {
-        onScoreUpdatedListener?.onAiVisibleUpdated()
-    }
-
-    fun updateCheatVisible() {
-        onScoreUpdatedListener?.onCheatVisibleUpdated()
+    fun setupGrid() {
+        grid.field[3][3] = Tile(3, 3, 65536)
+        grid.field[2][3] = Tile(2, 3, 32768)
+        grid.field[1][3] = Tile(1, 3, 16384)
+        grid.field[0][3] = Tile(0, 3, 8192)
+        grid.field[0][2] = Tile(0, 2, 4096)
+        grid.field[1][2] = Tile(1, 2, 2048)
+        grid.field[2][2] = Tile(2, 2, 1024)
+        grid.field[3][2] = Tile(3, 2, 512)
+        grid.field[3][1] = Tile(3, 1, 256)
+        grid.field[2][1] = Tile(2, 1, 128)
+        grid.field[1][1] = Tile(1, 1, 64)
+        grid.field[0][1] = Tile(0, 1, 32)
+        grid.field[0][0] = Tile(0, 0, 16)
+        grid.field[1][0] = Tile(1, 0, 8)
+        grid.field[2][0] = Tile(2, 0, 4)
+        grid.field[3][0] = Tile(3, 0, 4)
     }
 }

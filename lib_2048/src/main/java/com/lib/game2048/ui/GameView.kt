@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat
 import com.lib.game2048.GameController
 import com.lib.game2048.R
 import com.lib.game2048.entity.AnimationCell
-import com.lib.game2048.entity.Tile
+import kotlin.math.pow
 
 class GameView @JvmOverloads constructor(
     context: Context,
@@ -20,9 +20,12 @@ class GameView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     companion object {
-        const val BASE_ANIMATION_TIME: Long = 100000000
         const val MERGING_ACCELERATION = -0.5f
         const val INITIAL_VELOCITY = (1 - MERGING_ACCELERATION) / 4
+
+        fun log2(n: Long): Int {
+            return if (n <= 0) 0 else 63 - java.lang.Long.numberOfLeadingZeros(n)
+        }
     }
 
     private val paint = Paint()
@@ -45,7 +48,26 @@ class GameView @JvmOverloads constructor(
     private var currentTime = System.nanoTime()
     var refreshLastTime = true
 
-    val controller = GameController(context, this)
+    private var gameController: GameController? = null
+
+    fun bindController(controller: GameController) {
+        gameController = controller
+        controller.load()
+        controller.setOnViewUpdatedListener(object : GameController.OnViewUpdatedListener {
+            override fun refreshLastTime() {
+                refreshLastTime = true
+                invalidate()
+            }
+
+            override fun updateSquareNum(num: Int) {
+                updateLayout(num)
+            }
+
+            override fun resetFpsTime() {
+                resyncTime()
+            }
+        })
+    }
 
     init {
         backgroundRectangle = ContextCompat.getDrawable(context, R.drawable.background_rectangle)
@@ -102,13 +124,15 @@ class GameView @JvmOverloads constructor(
         drawEndGameState(canvas)
 
         // Refresh the screen if there is still an animation running
-        if (controller.aGrid.isAnimationActive()) {
-            invalidate()
-            tick()
-            // Refresh one last time on game end.
-        } else if (!controller.isGameActive() && refreshLastTime) {
-            invalidate()
-            refreshLastTime = false
+        gameController?.let {
+            if (it.aGrid.isAnimationActive()) {
+                invalidate()
+                tick()
+                // Refresh one last time on game end.
+            } else if (!it.isGameActive() && refreshLastTime) {
+                invalidate()
+                refreshLastTime = false
+            }
         }
     }
 
@@ -134,14 +158,15 @@ class GameView @JvmOverloads constructor(
                     val eX = sX + cellSize
                     val sY = gridWidth + (cellSize + gridWidth) * yy
                     val eY = sY + cellSize
-                    val currentTile: Tile? = controller.grid.getCellContent(xx, yy)
+                    val currentTile = gameController?.grid?.getCellContent(xx, yy)
                     if (currentTile != null) {
                         // Get and represent the value of the tile
-                        val value: Int = currentTile.getValue()
+                        val value = currentTile.getValue()
                         val index = log2(value)
 
                         // Check for any active animations
-                        val aArray: ArrayList<AnimationCell> = controller.aGrid.getAnimationCell(xx, yy)
+                        val aArray: List<AnimationCell> =
+                            gameController?.aGrid?.getAnimationCell(xx, yy) ?: listOf()
                         var animated = false
                         for (i in aArray.indices.reversed()) {
                             val aCell: AnimationCell = aArray[i]
@@ -154,7 +179,7 @@ class GameView @JvmOverloads constructor(
                             }
                             if (aCell.animationType == GameController.SPAWN_ANIMATION) { // Spawning
                                 // animation
-                                val percentDone: Double = aCell.getPercentageDone()
+                                val percentDone = aCell.getPercentageDone()
                                 val textScaleSize = percentDone.toFloat()
                                 val cellScaleSize = cellSize / 2 * (1 - textScaleSize)
                                 drawCell(
@@ -166,7 +191,7 @@ class GameView @JvmOverloads constructor(
                                 )
                             } else if (aCell.animationType == GameController.MERGE_ANIMATION) { // Merging
                                 // Animation
-                                val percentDone: Double = aCell.getPercentageDone()
+                                val percentDone = aCell.getPercentageDone()
                                 val textScaleSize =
                                     (1 + INITIAL_VELOCITY * percentDone + MERGING_ACCELERATION * percentDone * percentDone / 2).toFloat()
                                 val cellScaleSize = cellSize / 2 * (1 - textScaleSize)
@@ -179,17 +204,19 @@ class GameView @JvmOverloads constructor(
                                 )
                             } else if (aCell.animationType == GameController.MOVE_ANIMATION) { // Moving
                                 // animation
-                                val percentDone: Double = aCell.getPercentageDone()
+                                val percentDone = aCell.getPercentageDone()
                                 var tempIndex = index
                                 if (aArray.size >= 2) {
-                                    tempIndex = tempIndex - 1
+                                    tempIndex -= 1
                                 }
-                                val previousX: Int = aCell.extras?.get(0) ?: 0
-                                val previousY: Int = aCell.extras?.get(1) ?: 0
-                                val currentX: Int = currentTile.x
-                                val currentY: Int = currentTile.y
-                                val dX = (currentX - previousX) * (cellSize + gridWidth) * (percentDone - 1)
-                                val dY = (currentY - previousY) * (cellSize + gridWidth) * (percentDone - 1)
+                                val previousX = aCell.extras?.get(0) ?: 0
+                                val previousY = aCell.extras?.get(1) ?: 0
+                                val currentX = currentTile.x
+                                val currentY = currentTile.y
+                                val dX =
+                                    (currentX - previousX) * (cellSize + gridWidth) * (percentDone - 1)
+                                val dY =
+                                    (currentY - previousY) * (cellSize + gridWidth) * (percentDone - 1)
                                 drawCell(
                                     canvas, tempIndex,
                                     (sX + dX).toFloat(),
@@ -231,26 +258,38 @@ class GameView @JvmOverloads constructor(
         val middleX = width / 2f
         val middleY = length / 2f
         paint.color = if (index >= 3) textWhite else textBlack
-        paint.textSize = if (index >= 14) cellTextSize * 0.8f else cellTextSize
-        val valueStr = if (index >= 17) "2^$index" else "${Math.pow(2.0, index.toDouble()).toInt()}"
+        paint.textSize = if (index < 14) {//16384
+            cellTextSize
+        } else if (index < 17) {//131072
+            cellTextSize * 0.8f
+        } else {
+            cellTextSize * 0.7f
+        }
+        val valueStr = if (index >= 20) {
+            "2^$index"
+        } else {
+            "${2.0.pow(index.toDouble()).toLong()}"
+        }
         canvas.drawText(valueStr, left + middleX, top + middleY - centerText(), paint)
     }
 
     private fun drawEndGameState(canvas: Canvas) {
-        if (controller.gameLost()) {
-            var alphaChange = 1.0
-            val globalAnimation = controller.aGrid.globalAnimation
-            for (animation in globalAnimation) {
-                if (animation.animationType == GameController.FADE_GLOBAL_ANIMATION) {
-                    alphaChange = animation.getPercentageDone()
+        gameController?.let {
+            if (it.gameLost()) {
+                var alphaChange = 1.0
+                val globalAnimation = it.aGrid.globalAnimation
+                for (animation in globalAnimation) {
+                    if (animation.animationType == GameController.FADE_GLOBAL_ANIMATION) {
+                        alphaChange = animation.getPercentageDone()
+                    }
                 }
+                lightUpRectangle?.alpha = (255 * alphaChange).toInt()
+                drawDrawable(canvas, lightUpRectangle, 0f, 0f, width.toFloat(), height.toFloat())
+                paint.color = textBlack
+                paint.alpha = (255 * alphaChange).toInt()
+                paint.textSize = gameOverTextSize
+                canvas.drawText(loseText, 0.5f * width, 0.5f * height - centerText(), paint)
             }
-            lightUpRectangle?.alpha = (255 * alphaChange).toInt()
-            drawDrawable(canvas, lightUpRectangle, 0f, 0f, width.toFloat(), height.toFloat())
-            paint.color = textBlack
-            paint.alpha = (255 * alphaChange).toInt()
-            paint.textSize = gameOverTextSize
-            canvas.drawText(loseText, 0.5f * width, 0.5f * height - centerText(), paint)
         }
     }
 
@@ -268,12 +307,13 @@ class GameView @JvmOverloads constructor(
 
     private fun tick() {
         currentTime = System.nanoTime()
-        controller.aGrid.tickAll(currentTime - lastFPSTime)
+        gameController?.aGrid?.tickAll(currentTime - lastFPSTime)
         lastFPSTime = currentTime
     }
 
     fun resyncTime() {
         lastFPSTime = System.nanoTime()
+        invalidate()
     }
 
     fun updateLayout(num: Int) {
@@ -290,14 +330,9 @@ class GameView @JvmOverloads constructor(
         gameOverTextSize = paint.textSize * 0.8f * width / paint.measureText(loseText)
 
         resyncTime()
-        invalidate()
     }
 
     private fun centerText(): Float {
         return (paint.descent() + paint.ascent()) / 2f
-    }
-
-    private fun log2(n: Int): Int {
-        return if (n <= 0) 0 else 31 - Integer.numberOfLeadingZeros(n)
     }
 }

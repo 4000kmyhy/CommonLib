@@ -5,10 +5,12 @@
     android:orientation="vertical">
 
     <com.yhy.commonlib.ui.view.AndroidComposeView
+        android:id="@+id/compose_view"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
