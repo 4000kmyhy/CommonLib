@@ -9,10 +9,10 @@ plugins {
 
 android {
     namespace 'com.lib.media'
-    compileSdk 34
+    compileSdk libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk 23
+        minSdk libs.versions.minSdk.get().toInteger()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

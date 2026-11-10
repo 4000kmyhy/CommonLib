@@ -8,7 +8,7 @@ android {
     compileSdk libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
-        minSdk 23
+        minSdk libs.versions.minSdk.get().toInteger()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "proguard-rules.pro"
