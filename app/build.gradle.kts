@@ -113,4 +113,5 @@ dependencies {
     implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.1.2")
 //    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.1.2")
     implementation(project(":lib_compose"))
+//    implementation("com.coocent.music:baseLyric:1.1.1-SNAPSHOT")
 }

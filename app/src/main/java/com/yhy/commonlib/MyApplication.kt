@@ -19,7 +19,7 @@ class MyApplication : Application() {
 
         val sf2File = File(cacheDir.path, "FluidR3_GM.sf2")
         if (!sf2File.exists()) {
-            FileUtils.copyAssetFile(this,"FluidR3_GM.sf2",sf2File)
+            FileUtils.copyAssetFile(this, "FluidR3_GM.sf2", sf2File)
         }
     }
 

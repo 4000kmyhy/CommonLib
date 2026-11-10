@@ -17,7 +17,23 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
+            setUrl("http://192.168.8.41:8092/nexus/repository/maven-snapshots/")
+            isAllowInsecureProtocol = true
+        }
+        maven {
+            setUrl("http://192.168.8.41:8092/nexus/repository/maven-releases/")
+            isAllowInsecureProtocol = true
+        }
+        maven {
+            setUrl("http://192.168.8.41:8092/nexus/repository/maven-3rd-party/")
+            isAllowInsecureProtocol = true
+        }
+        maven {
             setUrl("https://jitpack.io")
+            isAllowInsecureProtocol = true
+        }
+        maven {
+            setUrl("https://artifact.bytedance.com/repository/pangle")
             isAllowInsecureProtocol = true
         }
     }
