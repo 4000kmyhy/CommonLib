@@ -1,9 +1,8 @@
-import java.util.Properties
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -14,8 +13,8 @@ android {
         applicationId = "com.yhy.commonlib"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 13
+        versionName = "1.1.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
@@ -46,12 +45,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
     }
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+    lint {
+        abortOnError = false
+        disable += setOf("MissingTranslation")
+        checkReleaseBuilds = false
     }
 }
 
@@ -81,6 +87,7 @@ dependencies {
     implementation(libs.androidx.runtime.livedata)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.accompanist.permissions)
 
     implementation(libs.multidex)
 
@@ -92,15 +99,18 @@ dependencies {
 
 //    implementation(project(":lib_auto_mix"))
 //    implementation(project(":lib_2048"))
-//    implementation(project(":lib_bass"))
+    implementation(project(":lib_bass"))
 //    implementation(project(":lib_eq_preset"))
 //    implementation(project(":lib_lyric"))
     implementation(project(":lib_retrofit"))
     implementation(project(":lib_web_pic"))
+    implementation(project(":lib_piano"))
 
-    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.1.1")
-    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.1.1")
-    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.1.1")
-    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.1.1")
-    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.1.1")
+//    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.1.2")
+    implementation(project(":lib_lyric"))
+    implementation("com.github.4000kmyhy.CommonLib:lib_auto_mix:1.1.2")
+//    implementation("com.github.4000kmyhy.CommonLib:lib_bass:1.1.2")
+    implementation("com.github.4000kmyhy.CommonLib:lib_2048:1.1.2")
+//    implementation("com.github.4000kmyhy.CommonLib:lib_compose:1.1.2")
+    implementation(project(":lib_compose"))
 }

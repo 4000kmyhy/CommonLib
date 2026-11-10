@@ -93,22 +93,6 @@ class BottomSheetDialogProperties constructor(
     val behaviorProperties: BottomSheetBehaviorProperties = BottomSheetBehaviorProperties()
 ) {
 
-    @Deprecated("Use NavigationBarProperties(color = navigationBarColor) instead")
-    constructor(
-        dismissOnBackPress: Boolean = true,
-        dismissOnClickOutside: Boolean = true,
-        dismissWithAnimation: Boolean = false,
-        securePolicy: SecureFlagPolicy = SecureFlagPolicy.Inherit,
-        navigationBarColor: Color
-    ) : this(
-        dismissOnBackPress,
-        dismissOnClickOutside,
-        dismissWithAnimation,
-        false,
-        securePolicy,
-        NavigationBarProperties(color = navigationBarColor)
-    )
-
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is BottomSheetDialogProperties) return false

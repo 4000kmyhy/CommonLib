@@ -1,5 +1,6 @@
 package com.yhy.commonlib.main
 
+import android.content.Intent
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -9,12 +10,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -34,14 +37,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lib.media.entity.Music
 import com.lib.media.utils.MediaUtils
+import com.yhy.commonlib.MidiTest
 import com.yhy.commonlib.R
 import com.yhy.commonlib.ui.dialog.buildColorPicker
 import com.yhy.commonlib.ui.theme.Purple80
 import com.yhy.commonlib.ui.view.GlideImage
-import com.yhy.lib_retrofit.service.DeepSeekApiService
-import com.yhy.lib_retrofit.service.GiteeAiApiService
 import com.yhy.lib_web_pic.utils.WebPicUtils
-import kotlinx.coroutines.launch
 
 /**
  * desc:
@@ -55,6 +56,7 @@ fun MainScreen(
     viewModel: MainViewModel = viewModel(),
     navigateToWaveform: (String) -> Unit
 ) {
+    val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
     val musicList by viewModel.musicListFlow.collectAsStateWithLifecycle()
@@ -66,6 +68,7 @@ fun MainScreen(
     }
 
     val colorPickerDialogState = buildColorPicker()
+
 
     Column(
         modifier = Modifier
@@ -88,17 +91,19 @@ fun MainScreen(
             musicList?.let {
                 itemsIndexed(it, key = { index, item -> "$index ${item.uuid}" }) { index, item ->
                     MusicItem(item) {
-//                        navigateToWaveform(item.data)
+                        navigateToWaveform(item.data)
 //                        newList -= item
 
-                        colorPickerDialogState.show()
-                        scope.launch {
-//                            DeepSeekApiService.request(item.name + "-" + item.artist)
-//                            GiteeAiApiService.request("")
-                        }
+//                        colorPickerDialogState.show()
+//                        scope.launch {
+////                            DeepSeekApiService.request(item.name + "-" + item.artist)
+////                            GiteeAiApiService.request("")
+//                        }
                     }
                 }
             }
+
+
         }
     }
 }

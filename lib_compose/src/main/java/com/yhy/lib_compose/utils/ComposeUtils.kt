@@ -2,18 +2,30 @@ package com.yhy.lib_compose.utils
 
 import android.view.ViewGroup
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.keepScreenOn
 import androidx.compose.ui.layout.LayoutModifier
 import androidx.compose.ui.layout.Measurable
 import androidx.compose.ui.layout.MeasureResult
@@ -55,6 +67,55 @@ fun Modifier.roundClickable(
 ) = this
     .clip(RoundedCornerShape(radius))
     .clickable(enabled = enabled, onClick = onClick)
+
+fun Modifier.iconButton(
+    radius: Dp = 50.dp,
+    padding: Dp = 8.dp,
+    enabled: Boolean = true,
+    onClick: () -> Unit
+) = this
+    .roundClickable(radius = radius, enabled = enabled, onClick = onClick)
+    .padding(padding)
+
+fun Modifier.clickableWithPressCallback(
+    enabled: Boolean = true,
+    onPressed: (Boolean) -> Unit = {},
+    onClick: () -> Unit,
+): Modifier = composed {
+    val interactionSource = remember { MutableInteractionSource() }
+
+    LaunchedEffect(interactionSource) {
+        interactionSource.interactions.collect { interaction ->
+            when (interaction) {
+                is PressInteraction.Press -> onPressed(true)
+                else -> onPressed(false)
+            }
+        }
+    }
+
+    this.clickable(
+        enabled = enabled,
+        indication = null,
+        interactionSource = interactionSource,
+        onClick = onClick
+    )
+}
+
+fun Modifier.marquee(enabled: Boolean = true) = this.then(
+    if (enabled) {
+        Modifier.basicMarquee(iterations = Int.MAX_VALUE)
+    } else {
+        Modifier
+    }
+)
+
+fun Modifier.keepScreenOn(enabled: Boolean = true) = this.then(
+    if (enabled) {
+        Modifier.keepScreenOn()
+    } else {
+        Modifier
+    }
+)
 
 fun Modifier.isInvisible(value: Boolean) = if (value) this.then(Invisible) else this
 
@@ -133,8 +194,8 @@ fun ComponentActivity.buildDialog(build: @Composable () -> DialogState) {
     }
 }
 
-fun String.toTextFieldValue() = let {
-    TextFieldValue(it, TextRange(it.length))
+fun String.toTextFieldValue(index: Int = length) = let {
+    TextFieldValue(it, TextRange(index))
 }
 
 fun processValueChange(
@@ -160,17 +221,123 @@ fun processValueChange(
         val inputValue = newValue.text.substring(start, newStart)
 
         val remainingLength = maxLength - str1.length - str2.length
-        val text = if (remainingLength > 0) {
-            inputValue.take(remainingLength)
-        } else {
-            ""
-        }
-
-        onValueChange(
-            TextFieldValue(
-                text = str1 + text + str2,
-                selection = TextRange(start + text.length)
+        if (remainingLength > 0) { //剩余长度为0不用更新
+            val text = inputValue.take(remainingLength)
+            onValueChange(
+                TextFieldValue(
+                    text = str1 + text + str2,
+                    selection = TextRange(start + text.length)
+                )
             )
+        }
+    }
+}
+
+suspend fun LazyListState.scrollToItemVisible(position: Int) {
+    try {
+        val visibleItemsInfo = layoutInfo.visibleItemsInfo
+        if (visibleItemsInfo.isNotEmpty()) {
+            val firstItem = visibleItemsInfo.first()
+            val lastItem = visibleItemsInfo.last()
+            if (position <= firstItem.index) {
+                scrollToItem(position)
+            } else if (position >= lastItem.index) {
+                val endOffset =
+                    layoutInfo.viewportStartOffset + layoutInfo.viewportEndOffset - firstItem.size
+                scrollToItem(position, -endOffset)
+            }
+        } else {
+            scrollToItem(position)
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+suspend fun LazyListState.animateScrollToItemVisible(position: Int) {
+    try {
+        val visibleItemsInfo = layoutInfo.visibleItemsInfo
+        if (visibleItemsInfo.isNotEmpty()) {
+            val firstItem = visibleItemsInfo.first()
+            val lastItem = visibleItemsInfo.last()
+            if (position <= firstItem.index) {
+                animateScrollToItem(position)
+            } else if (position >= lastItem.index) {
+                val endOffset =
+                    layoutInfo.viewportStartOffset + layoutInfo.viewportEndOffset - firstItem.size
+                animateScrollToItem(position, -endOffset)
+            }
+        } else {
+            animateScrollToItem(position)
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+fun Modifier.drawEdgeShadow(
+    shadowColor: Color = Color.Black,
+    edgeSize: Dp = 15.dp,
+    isTop: Boolean = false,
+    isBottom: Boolean = false,
+    isLeft: Boolean = false,
+    isRight: Boolean = false
+) = this.drawWithContent {
+    drawContent()
+    if (isTop) {
+        drawRect(
+            brush = Brush.verticalGradient(
+                colors = listOf(
+                    shadowColor,
+                    Color.Transparent,
+                ),
+                startY = 0f,
+                endY = edgeSize.toPx()
+            ),
+            topLeft = Offset(0f, 0f),
+            size = Size(size.width, edgeSize.toPx())
+        )
+    }
+    if (isBottom) {
+        drawRect(
+            brush = Brush.verticalGradient(
+                colors = listOf(
+                    Color.Transparent,
+                    shadowColor,
+                ),
+                startY = size.height - edgeSize.toPx(),
+                endY = size.height
+            ),
+            topLeft = Offset(0f, size.height - edgeSize.toPx()),
+            size = Size(size.width, edgeSize.toPx())
+        )
+    }
+    if (isLeft) {
+        drawRect(
+            brush = Brush.horizontalGradient(
+                colors = listOf(
+                    shadowColor,
+                    Color.Transparent,
+                ),
+                startX = 0f,
+                endX = edgeSize.toPx()
+            ),
+            topLeft = Offset(0f, 0f),
+            size = Size(edgeSize.toPx(), size.height)
+        )
+    }
+    if (isRight) {
+        drawRect(
+            brush = Brush.horizontalGradient(
+                colors = listOf(
+                    Color.Transparent,
+                    shadowColor,
+                ),
+                startX = size.width - edgeSize.toPx(),
+                endX = size.width
+            ),
+            topLeft = Offset(size.width - edgeSize.toPx(), 0f),
+            size = Size(edgeSize.toPx(), size.height)
         )
     }
 }

@@ -1,0 +1,164 @@
+{
+  "title": "Jingle Bells",
+  "key": "1=F",
+  "timeSignature": "4/4",
+  "bpm": 110,
+  "sections": [
+    {
+      "no": 1,
+      "xx notes": [
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 2,
+      "xx notes": [
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 1, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 0.5 },
+        { "pitch": 2 },
+        { "pitch": 5 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 1, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 }
+      ]
+    },
+    {
+      "no": 8,
+      "notes": [
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 9,
+      "notes": [
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    },
+    {
+      "no": 10,
+      "notes": [
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 1.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 11,
+      "notes": [
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 12,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 2 }
+      ]
+    },
+    {
+      "no": 13,
+      "notes": [
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 }
+      ]
+    }
+  ]
+}

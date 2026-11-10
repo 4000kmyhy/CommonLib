@@ -1,0 +1,110 @@
+{
+  "title": "小星星",
+  "key": "1=C",
+  "timeSignature": "4/4",
+  "bpm": 120,
+  "sections": [
+    {
+      "no": 1,
+      "notes": [
+        { "pitch": 1 },
+        { "pitch": 1 },
+        { "pitch": 5 },
+        { "pitch": 5 }
+      ]
+    },
+    {
+      "no": 2,
+      "notes": [
+        { "pitch": 6 },
+        { "pitch": 6 },
+        { "pitch": 5, "duration": 2 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "pitch": 4 },
+        { "pitch": 4 },
+        { "pitch": 3 },
+        { "pitch": 3 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "pitch": 2 },
+        { "pitch": 2 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "pitch": 5 },
+        { "pitch": 5 },
+        { "pitch": 4 },
+        { "pitch": 4 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 3 },
+        { "pitch": 3 },
+        { "pitch": 2, "duration": 2 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "pitch": 5 },
+        { "pitch": 5 },
+        { "pitch": 4 },
+        { "pitch": 4 }
+      ]
+    },
+    {
+      "no": 8,
+      "notes": [
+        { "pitch": 3 },
+        { "pitch": 3 },
+        { "pitch": 2, "duration": 2 }
+      ]
+    },
+    {
+      "no": 9,
+      "notes": [
+        { "pitch": 1 },
+        { "pitch": 1 },
+        { "pitch": 5 },
+        { "pitch": 5 }
+      ]
+    },
+    {
+      "no": 10,
+      "notes": [
+        { "pitch": 6 },
+        { "pitch": 6 },
+        { "pitch": 5, "duration": 2 }
+      ]
+    },
+    {
+      "no": 11,
+      "notes": [
+        { "pitch": 4 },
+        { "pitch": 4 },
+        { "pitch": 3 },
+        { "pitch": 3 }
+      ]
+    },
+    {
+      "no": 12,
+      "notes": [
+        { "pitch": 2 },
+        { "pitch": 2 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    }
+  ]
+}

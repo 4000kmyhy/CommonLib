@@ -1,0 +1,1020 @@
+{
+  "title": "I Really Want to Stay At Your House",
+  "key": "1=C",
+  "timeSignature": "4/4",
+  "bpm": 72,
+  "sections": [
+    {
+      "no": 1,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 0, "duration": 3.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 2,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 0, "duration": 0.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 8,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 9,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 10,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 11,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 12,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 13,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 6, "duration": 8 }
+      ]
+    },
+    {
+      "no": 14,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 0, "duration": 4 }
+      ]
+    },
+    {
+      "no": 15,
+      "notes": [
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "ll", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 16,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 17,
+      "notes": [
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "ll", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 18,
+      "notes": [
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.75 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 19,
+      "notes": [
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "ll", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 20,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 21,
+      "notes": [
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 4, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.25 },
+        { "octave": "ll", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "octave": "l", "pitch": 2, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 22,
+      "notes": [
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.5 },
+        { "pitch": 3, "duration": 2 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0 }
+      ],
+      "chord": [
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 3, "duration": 0.25 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 23,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 24,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 25,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 26,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 27,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 28,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 29,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 30,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 6, "duration": 0.75 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "pitch": 5, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.25 },
+        { "pitch": 0, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.75 }
+      ]
+    },
+    {
+      "no": 31,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 3, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 },
+        { "octave": "h", "pitch": 1, "duration": 0.25 },
+        { "pitch": 3, "duration": 0.25 }
+      ],
+      "chord": [
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 1, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    },
+    {
+      "no": 32,
+      "notes": [
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 2, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 2, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 2, "duration": 0.25 },
+
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 2, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 2, "duration": 0.25 },
+        { "pitch": 7, "duration": 0.25 },
+        { "pitch": 2, "duration": 0.25 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "pitch": 0, "duration": 0.25 },
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+
+        { "octave": "l", "pitch": 5, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 },
+        { "pitch": 0, "duration": 0.25 }
+      ]
+    }
+  ]
+}

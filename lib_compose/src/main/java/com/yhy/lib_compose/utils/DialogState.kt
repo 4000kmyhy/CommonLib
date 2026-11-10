@@ -61,6 +61,33 @@ open class DialogState(
 }
 
 @Composable
+fun <T> rememberDataDialogState() = remember { DataDialogState<T>() }
+
+open class DataDialogState<T> : DialogState() {
+
+    companion object {
+        @Composable
+        fun <T> build(content: @Composable (data: T, onDismiss: () -> Unit) -> Unit): DataDialogState<T> {
+            val dialogState = rememberDataDialogState<T>()
+            dialogState.data?.let {
+                if (dialogState.isShow) {
+                    content(it, dialogState::dismiss)
+                }
+            }
+            return dialogState
+        }
+    }
+
+    var data by mutableStateOf(null as T?)
+        private set
+
+    fun show(data: T?) {
+        this.data = data
+        show()
+    }
+}
+
+@Composable
 fun rememberListDialogState() = remember { ListDialogState() }
 
 open class ListDialogState {

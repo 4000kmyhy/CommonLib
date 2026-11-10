@@ -30,5 +30,5 @@ LOCAL_MODULE_SUFFIX := .so
 
 include $(BUILD_SHARED_LIBRARY)
 
-clean:
-	rm -rf $(LOCAL_PATH)/bin/*
+# clean:
+# 	rm -rf $(LOCAL_PATH)/bin/*

@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredSize
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Slider
@@ -226,8 +225,8 @@ object MySliderDefaults {
         val sliderRight = Offset(size.width, center.y)
         val sliderStart = if (isRtl) sliderRight else sliderLeft
         val sliderEnd = if (isRtl) sliderLeft else sliderRight
-        val tickSize = 2.0.dp.toPx()
-        val trackStrokeWidth = 4.dp.toPx()
+        val tickSize = size.height / 2
+        val trackStrokeWidth = size.height
         drawLine(
             inactiveTrackColor,
             sliderStart,

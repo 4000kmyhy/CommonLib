@@ -9,6 +9,9 @@ import com.un4seen.bass.BASSenc
 import com.un4seen.bass.BASSenc_FLAC
 import com.un4seen.bass.BASSenc_MP3
 import com.un4seen.bass.BASSenc_OGG
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.withContext
 import java.io.File
 import java.nio.ByteBuffer
 
@@ -40,12 +43,11 @@ object BassUtils {
 
     private const val device = -1
     private const val freq = 44100
-    private const val flags = 0
 
     private var isInitBass = false
     private var isInitRecord = false
 
-    fun initBass(): Boolean {
+    fun initBass(flags: Int = 0): Boolean {
         if (!isInitBass) {
             isInitBass = BASS.BASS_Init(device, freq, flags)
 //            val version = BASS.BASS_GetVersion()
@@ -130,7 +132,6 @@ object BassUtils {
         BASS.BASS_ChannelStop(handle)
         BASS.BASS_ChannelSetPosition(handle, 0, BASS.BASS_POS_BYTE)//播放进度归0
     }
-
 
     fun release(handle: Int) {
         if (handle == 0) return
@@ -320,6 +321,56 @@ object BassUtils {
             Log.d(TAG, "logError($msg): ok")
         } else {
             Log.d(TAG, "logError($msg): $code")
+        }
+    }
+
+    suspend fun loadWaveformData(
+        path: String,
+        totalSize: Int = 100,
+        onUpdated: (List<Int>) -> Unit = {},
+        onCompletion: (List<Int>) -> Unit = {}
+    ) {
+        withContext(Dispatchers.IO) {
+            val handle = BASS.BASS_StreamCreateFile(
+                path, 0, 0,
+                BASS.BASS_STREAM_DECODE or BASS.BASS_STREAM_PRESCAN
+            )
+            val length = BASS.BASS_ChannelGetLength(handle, BASS.BASS_POS_BYTE)
+            if (length == 0L) {
+                BASS.BASS_StreamFree(handle)
+                return@withContext
+            }
+            val bufferSize = (length / totalSize).toInt()
+            if (bufferSize == 0) {
+                BASS.BASS_StreamFree(handle)
+                return@withContext
+            }
+
+            val dataList = ArrayList<Int>()
+            val buffer = ByteBuffer.allocate(bufferSize)
+            while (BASS.BASS_ChannelGetData(handle, buffer, buffer.limit()) >= 0) {
+                if (!isActive) break
+                if (dataList.size >= totalSize) break
+
+                val level = floatArrayOf(0f)
+                BASS.BASS_ChannelGetLevelEx(
+                    handle,
+                    level,
+                    0.01f,
+                    BASS.BASS_LEVEL_MONO or BASS.BASS_LEVEL_RMS
+                )
+                val data = (level[0].coerceIn(0f, 1f) * 100).toInt()
+                dataList.add(data)
+                onUpdated(dataList)
+            }
+            while (dataList.size < totalSize) {
+                if (!isActive) break
+                dataList.add(0)
+                onUpdated(dataList)
+            }
+            onCompletion(dataList)
+            //已解码完，释放当前解码句柄
+            BASS.BASS_StreamFree(handle)
         }
     }
 }

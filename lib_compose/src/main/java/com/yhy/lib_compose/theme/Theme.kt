@@ -109,7 +109,7 @@ fun BaseTheme(
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
-private val MyRippleConfiguration = RippleConfiguration(
+val MyRippleConfiguration = RippleConfiguration(
     color = Color(0x80DDDDDD),
     rippleAlpha = RippleAlpha(
         0.5f,
@@ -117,6 +117,11 @@ private val MyRippleConfiguration = RippleConfiguration(
         0.5f,
         0.5f
     )
+)
+
+@OptIn(ExperimentalMaterial3Api::class)
+val NoRippleConfiguration = RippleConfiguration(
+    color = Color(0x00000000)
 )
 
 fun setFullScreen(window: Window, isFullScreen: Boolean) {

@@ -1,0 +1,1330 @@
+{
+  "title": "I Really Want to Stay At Your House",
+  "key": "1=C",
+  "timeSignature": "4/4",
+  "bpm": 125,
+  "sections": [
+    {
+      "no": 1,
+      "notes": [
+        { "pitch": 0 },
+        { "pitch": 0 },
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 2,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 3.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 1 }] },
+        { "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 1 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "pitch": 0 },
+        { "pitch": 0 },
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 8,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }, { "octave": "l", "pitch": 1 }] },
+        { "pitch": 3, "duration": 3 }
+      ]
+    },
+    {
+      "no": 9,
+      "notes": [
+        { "pitch": 0 },
+        { "pitch": 0 },
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 10,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 11,
+      "notes": [
+        { "pitch": 3, "duration": 1.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 1.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 12,
+      "notes": [
+        { "pitch": 2, "duration": 1.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 1, "duration": 2 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 1 }] },
+        { "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 1 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 1 }
+      ]
+    },
+    {
+      "no": 13,
+      "notes": [
+        { "pitch": 0 },
+        { "pitch": 0 },
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 7, "duration": 0.5 },
+        { "pitch": 7, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 14,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 2 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 15,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 7},
+        { "octave": "l", "pitch": 7, "duration" : 0.5},
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 16,
+      "notes": [
+        { "pitch": 0, "duration": 3 },
+        { "octave": "h", "pitch": 1}
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 1 }, { "octave": "l", "pitch": 5 }] },
+        { "pitch": 3, "duration": 3 }
+      ]
+    },
+    {
+      "no": 17,
+      "notes": [
+        { "pitch": 0 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 1.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 18,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 19,
+      "notes": [
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 20,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 3 },
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 21,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 22,
+      "notes": [
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 23,
+      "notes": [
+        { "pitch": 6, "duration": 3 },
+        { "pitch": 5 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 24,
+      "notes": [
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 3 },
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },{
+      "no": 25,
+      "notes": [
+        { "pitch": 0 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 1.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 26,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 27,
+      "notes": [
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 1.5 },
+        { "octave": "h", "pitch": 6, "duration": 1 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 28,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 3 },
+        { "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 29,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 30,
+      "notes": [
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 31,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 32,
+      "notes": [
+        { "pitch": 0, "duration": 1.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration" : 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration" : 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration" : 3 }
+      ]
+    },
+    {
+      "no": 33,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "pitch": 1, "extra": [{ "pitch": 4 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 4, "duration" : 0.75 },
+        { "octave": "l", "pitch": 4, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 34,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "pitch": 7, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 1, "extra": [{ "pitch": 5 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 1, "duration" : 0.75 },
+        { "octave": "l", "pitch": 1, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 35,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 1, "extra": [{ "pitch": 3 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 6, "duration" : 0.75 },
+        { "octave": "l", "pitch": 6, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 36,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 2, "extra": [{ "pitch": 5 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 5, "duration" : 0.75 },
+        { "octave": "l", "pitch": 5, "duration" : 0.5 },
+        { "pitch": 2, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 37,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "pitch": 1, "extra": [{ "pitch": 4 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 4, "duration" : 0.75 },
+        { "octave": "l", "pitch": 4, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 38,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 1, "extra": [{ "pitch": 5 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 1, "duration" : 0.75 },
+        { "octave": "l", "pitch": 1, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 39,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 1, "extra": [{ "pitch": 3 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 6, "duration" : 0.75 },
+        { "octave": "l", "pitch": 6, "duration" : 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 40,
+      "notes": [
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 2, "extra": [{ "pitch": 5 }], "duration" : 0.75 },
+        { "octave": "l", "pitch": 5, "duration" : 0.75 },
+        { "octave": "l", "pitch": 5, "duration" : 0.5 },
+        { "pitch": 2, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 41,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 42,
+      "notes": [
+        { "pitch": 0, "duration": 1.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3 },
+        { "octave": "h", "pitch": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 43,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 1.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 44,
+      "notes": [
+        { "pitch": 0 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 45,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 46,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 47,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 48,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 3 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration" : 0.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration" : 1.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 49,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 1.25 },
+        { "octave": "h", "pitch": 3, "duration": 0.25 },
+        { "octave": "h", "pitch": 2, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 2 }], "duration" : 4 }
+      ]
+    },
+    {
+      "no": 50,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 0, "duration": 4 }
+      ]
+    },
+    {
+      "no": 51,
+      "notes": [
+        { "pitch": 3, "duration": 8 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 4 }
+      ]
+    },
+    {
+      "no": 52,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "pitch": 0, "duration": 4 }
+      ]
+    },
+    {
+      "no": 53,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 54,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 55,
+      "notes": [
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 3.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 56,
+      "notes": [
+        { "pitch": 0, "duration": 4 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 57,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 58,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 2 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 2 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 2 }] },
+        { "octave": "l", "pitch": 5, "extra": [{ "pitch": 2 }] }
+      ]
+    },
+    {
+      "no": 59,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 2 },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 6, "duration": 3 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }] },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }, { "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 60,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "pitch": 5, "duration": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }] },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 3 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "extra": [{ "pitch": 1 }, { "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 61,
+      "notes": [
+        { "pitch": 6, "duration": 1.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 62,
+      "notes": [
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 63,
+      "notes": [
+        { "pitch": 3, "duration": 1.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 3, "duration": 1.5 },
+        { "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 64,
+      "notes": [
+        { "pitch": 2, "duration": 1.5 },
+        { "pitch": 3, "duration": 0.5 },
+        { "pitch": 1, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 5 }
+      ]
+    },
+    {
+      "no": 65,
+      "notes": [
+        { "pitch": 0, "duration": 2.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 66,
+      "notes": [
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 67,
+      "notes": [
+        { "pitch": 1, "duration": 0.5 },
+        { "pitch": 2, "duration": 0.5 },
+        { "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 68,
+      "notes": [
+        { "pitch": 0, "duration": 1.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }, { "octave": "l", "pitch": 6 }], "duration": 3 }
+      ]
+    },
+    {
+      "no": 69,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "pitch": 1, "extra": [{ "pitch": 4 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 4, "duration": 0.75 },
+        { "octave": "l", "pitch": 4, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 70,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "pitch": 7, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 1, "extra": [{ "pitch": 5 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 1, "duration": 0.75 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 71,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 1, "extra": [{ "pitch": 3 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 72,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 2, "extra": [{ "pitch": 5 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 5, "duration": 0.75 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 2, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 73,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 4 }] },
+        { "pitch": 1, "extra": [{ "pitch": 4 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 4, "duration": 0.75 },
+        { "octave": "l", "pitch": 4, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 4 }] }
+      ]
+    },
+    {
+      "no": 74,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 1, "extra": [{ "pitch": 5 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 1, "duration": 0.75 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 75,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 1, "extra": [{ "pitch": 3 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.75 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "pitch": 1, "extra": [{ "pitch": 3 }] }
+      ]
+    },
+    {
+      "no": 76,
+      "notes": [
+        { "octave": "h", "pitch": 2 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 2, "extra": [{ "pitch": 5 }], "duration": 0.75 },
+        { "octave": "l", "pitch": 5, "duration": 0.75 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 2, "extra": [{ "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 77,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 78,
+      "notes": [
+        { "pitch": 0, "duration": 1.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3 },
+        { "octave": "h", "pitch": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 79,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 1.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 2 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 80,
+      "notes": [
+        { "pitch": 0 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 81,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 4, "extra": [{ "pitch": 1 }] }
+      ]
+    },
+    {
+      "no": 82,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 1, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    },
+    {
+      "no": 83,
+      "notes": [
+        { "pitch": 0, "duration": 0.5 },
+        { "pitch": 5, "duration": 0.5 },
+        { "octave": "h", "pitch": 1 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 0.5 },
+        { "octave": "h", "pitch": 2, "duration": 0.5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 3, "extra": [{ "octave": "l", "pitch": 6 }] }
+      ]
+    },
+    {
+      "no": 84,
+      "notes": [
+        { "octave": "h", "pitch": 2, "duration": 0.5 },
+        { "octave": "h", "pitch": 3, "duration": 0.5 },
+        { "octave": "h", "pitch": 1, "duration": 2 },
+        { "octave": "h", "pitch": 1, "duration": 5 }
+      ],
+      "chord": [
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] },
+        { "pitch": 0, "duration": 0.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }], "duration": 1.5 },
+        { "octave": "l", "pitch": 2, "extra": [{ "octave": "l", "pitch": 5 }] }
+      ]
+    }
+  ]
+}

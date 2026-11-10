@@ -1,0 +1,73 @@
+{
+  "title": "生日快乐歌",
+  "key": "1=F",
+  "timeSignature": "3/4",
+  "bpm": 120,
+  "sections": [
+    {
+      "no": 1,
+      "notes": [
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6 },
+        { "octave": "l", "pitch": 5 }
+      ]
+    },
+    {
+      "no": 2,
+      "notes": [
+        { "pitch": 1 },
+        { "octave": "l", "pitch": 7, "duration": 2 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 6 },
+        { "octave": "l", "pitch": 5 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "pitch": 2 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5 },
+        { "pitch": 5 },
+        { "pitch": 3 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 1 },
+        { "octave": "l", "pitch": 7 },
+        { "octave": "l", "pitch": 6 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 4, "duration": 0.5 },
+        { "pitch": 3 },
+        { "pitch": 1 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "pitch": 2 },
+        { "pitch": 1, "duration": 2 }
+      ]
+    }
+  ]
+}

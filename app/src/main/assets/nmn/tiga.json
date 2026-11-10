@@ -1,0 +1,437 @@
+{
+  "title": "love theme from TIGA",
+  "key": "1=C",
+  "timeSignature": "4/4",
+  "bpm": 88,
+  "sections": [
+    {
+      "no": 1,
+      "notes": [
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "ll", "pitch": 6, "duration": 0.25 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 3, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 2,
+      "notes": [
+        { "octave": "ll", "pitch": 5, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 3, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 3,
+      "notes": [
+        { "octave": "ll", "pitch": 4, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 3, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 4,
+      "notes": [
+        { "octave": "ll", "pitch": 3, "duration": 0.5 },
+        { "octave": "ll", "pitch": 7, "duration": 1 },
+        { "octave": "l", "pitch": 2, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 0.5, "sharp": true },
+        { "octave": "l", "pitch": 3, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 5,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 6,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 7,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 8,
+      "notes": [
+        { "octave": "m", "pitch": 4, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 2.5 }
+      ]
+    },
+    {
+      "no": 9,
+      "notes": [
+        { "octave": "m", "pitch": 4, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 4.5 }
+      ]
+    },
+    {
+      "no": 10,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 5, "duration": 2 }
+      ]
+    },
+    {
+      "no": 11,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 12,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 13,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 }
+      ]
+    },
+    {
+      "no": 14,
+      "notes": [
+        { "octave": "l", "pitch": 6, "duration": 1 },
+        { "octave": "l", "pitch": 7, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 15,
+      "notes": [
+        { "octave": "m", "pitch": 4, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 2.5 }
+      ]
+    },
+    {
+      "no": 16,
+      "notes": [
+        { "octave": "m", "pitch": 4, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 1 }
+      ]
+    },
+    {
+      "no": 17,
+      "notes": [
+        { "octave": "l", "pitch": 3, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 1 }
+      ]
+    },
+    {
+      "no": 18,
+      "notes": [
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 1.5 },
+        { "octave": "l", "pitch": 7, "duration": 2 }
+      ]
+    },
+    {
+      "no": 19,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 1 }
+      ]
+    },
+    {
+      "no": 20,
+      "notes": [
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 21,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 3.5 },
+        { "pitch" : 0 }
+      ]
+    },
+    {
+      "no": 22,
+      "notes": [
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 1 }
+      ]
+    },
+    {
+      "no": 23,
+      "notes": [
+        { "octave": "l", "pitch": 7, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 0.5 },
+        { "octave": "l", "pitch": 6, "duration": 2 }
+      ]
+    },
+    {
+      "no": 24,
+      "notes": [
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 1 },
+        { "octave": "m", "pitch": 1, "duration": 0.5 },
+        { "octave": "m", "pitch": 2, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 4.5 }
+      ]
+    },
+    {
+      "no": 25,
+      "notes": [
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 26,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 }
+      ]
+    },
+    {
+      "no": 27,
+      "notes": [
+        { "octave": "m", "pitch": 6, "duration": 1.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 28,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1.5 }
+      ]
+    },
+    {
+      "no": 29,
+      "notes": [
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 30,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 }
+      ]
+    },
+    {
+      "no": 31,
+      "notes": [
+        { "octave": "m", "pitch": 6, "duration": 1.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 32,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 2.5 }
+      ]
+    },
+    {
+      "no": 33,
+      "notes": [
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 34,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 }
+      ]
+    },
+    {
+      "no": 35,
+      "notes": [
+        { "octave": "m", "pitch": 6, "duration": 1.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 36,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 2.5 }
+      ]
+    },
+    {
+      "no": 37,
+      "notes": [
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 38,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 }
+      ]
+    },
+    {
+      "no": 39,
+      "notes": [
+        { "octave": "m", "pitch": 6, "duration": 1.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 40,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 3, "duration": 0.5 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 },
+        { "octave": "m", "pitch": 6, "duration": 0.5 },
+        { "octave": "m", "pitch": 5, "sharp": true, "duration": 1 },
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 0.5 }
+      ]
+    },
+    {
+      "no": 41,
+      "notes": [
+        { "octave": "m", "pitch": 4, "sharp": true, "duration": 2 }
+      ]
+    }
+  ]
+}

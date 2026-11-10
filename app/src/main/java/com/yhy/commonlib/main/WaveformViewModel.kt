@@ -83,10 +83,10 @@ class WaveformViewModel : ViewModel() {
 
 fun byteArray2SamplerArray(data: ByteArray, size: Int = 1): IntArray {
     val tempSamplerData = IntArray(size)
-    val byteCountPreSampler = 16 / 8
     if (data.isEmpty()) {
         return tempSamplerData
     }
+    val byteCountPreSampler = 16 / 8
     val samplerCount = if (data.size % byteCountPreSampler == 0) {
         data.size / byteCountPreSampler
     } else {

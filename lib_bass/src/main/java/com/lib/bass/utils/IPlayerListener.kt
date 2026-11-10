@@ -8,6 +8,6 @@ import com.lib.bass.BassPlayer
  * user: xujj
  * time: 2023/10/27 11:53
  **/
-interface IPlayerListener {
+fun interface IPlayerListener {
     fun onPlayStateChanged(player: BassPlayer, state: Int, playStateChanged: Boolean)
 }
