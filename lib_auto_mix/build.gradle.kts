@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewModelCompose)
     implementation(libs.coil.compose)
     implementation(libs.androidx.navigation)
+    implementation(libs.androidx.material.icons.extended)
 
     api(project(":lib_media"))
 }

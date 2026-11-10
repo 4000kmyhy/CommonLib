@@ -92,7 +92,7 @@ data class HomeState(
 
 @Composable
 fun AutoMixHome(
-    viewModel: AutoMixViewModel = viewModel(LocalContext.current as AutoMixActivity),
+    viewModel: AutoMixViewModel = viewModel(),
     onNavigationClick: () -> Unit = {},
     onSettingClick: () -> Unit = {},
     requestPermission: () -> Unit = {},
