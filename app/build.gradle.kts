@@ -91,8 +91,8 @@ dependencies {
 
     implementation(libs.multidex)
 
-    implementation(libs.glide)
-    implementation(libs.glide.transformations)
+//    implementation(libs.glide)
+//    implementation(libs.glide.transformations)
     implementation(libs.jsoup)
     implementation(libs.retrofit2)
     implementation(libs.retrofit2.converter.gson)
@@ -103,7 +103,7 @@ dependencies {
 //    implementation(project(":lib_eq_preset"))
 //    implementation(project(":lib_lyric"))
     implementation(project(":lib_retrofit"))
-    implementation(project(":lib_web_pic"))
+//    implementation(project(":lib_web_pic"))
     implementation(project(":lib_piano"))
 
 //    implementation("com.github.4000kmyhy.CommonLib:lib_lyric:1.1.2")

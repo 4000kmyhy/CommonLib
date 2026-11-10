@@ -42,9 +42,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lib.bass.BassPlayer
 import com.lib.bass.utils.BassUtils
 import com.yhy.commonlib.R
-import com.yhy.commonlib.utils.rememberBlurImageBitmap
 import com.yhy.lib_compose.utils.roundClickable
-import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -103,11 +101,11 @@ fun PlayScreen(
     viewModel: PlayViewModel = viewModel()
 ) {
 
-    val blurImageBitmap by rememberBlurImageBitmap(
-        string = "",
-        defRes = R.drawable.fetzg,
-        BlurTransformation(5, 5)
-    )
+//    val blurImageBitmap by rememberBlurImageBitmap(
+//        string = "",
+//        defRes = R.drawable.fetzg,
+//        BlurTransformation(5, 5)
+//    )
 
     val bitmapDisc = ImageBitmap.imageResource(id = R.drawable.img_disk)
     val bitmapCover = ImageBitmap.imageResource(id = R.drawable.fetzg)

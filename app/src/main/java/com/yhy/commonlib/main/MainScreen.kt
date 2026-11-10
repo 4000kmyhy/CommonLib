@@ -1,7 +1,5 @@
 package com.yhy.commonlib.main
 
-import android.content.Intent
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.rememberTransformableState
@@ -10,13 +8,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,12 +31,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.lib.media.entity.Music
 import com.lib.media.utils.MediaUtils
-import com.yhy.commonlib.MidiTest
-import com.yhy.commonlib.R
 import com.yhy.commonlib.ui.dialog.buildColorPicker
 import com.yhy.commonlib.ui.theme.Purple80
-import com.yhy.commonlib.ui.view.GlideImage
-import com.yhy.lib_web_pic.utils.WebPicUtils
 
 /**
  * desc:
@@ -64,7 +54,7 @@ fun MainScreen(
 
     var picUrls by remember { mutableStateOf<List<String>>(listOf()) }
     LaunchedEffect(Unit) {
-        picUrls = WebPicUtils.getBingPicUrls("赵希予")
+//        picUrls = WebPicUtils.getBingPicUrls("赵希予")
     }
 
     val colorPickerDialogState = buildColorPicker()
@@ -114,15 +104,15 @@ fun MusicItem(
     onClick: () -> Unit
 ) {
     val context = LocalContext.current
-    var coverUrl by remember {
-        mutableStateOf(
-            WebPicUtils.getPicUrl(
-                context,
-                item.id,
-                item.albumId
-            )
-        )
-    }
+//    var coverUrl by remember {
+//        mutableStateOf(
+//            WebPicUtils.getPicUrl(
+//                context,
+//                item.id,
+//                item.albumId
+//            )
+//        )
+//    }
     var coverUrl1 by remember { mutableStateOf(MediaUtils.getAlbumArtUri(item.albumId).toString()) }
     var coverUrl2 by remember { mutableStateOf(MediaUtils.getAlbumArtUri(item.albumId).toString()) }
     var coverUrl3 by remember { mutableStateOf(MediaUtils.getAlbumArtUri(item.albumId).toString()) }
@@ -161,26 +151,26 @@ fun MusicItem(
             .padding(horizontal = 15.dp, vertical = 7.5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        GlideImage(
-            modifier = Modifier
-                .size(50.dp)
-                .clickable {
-                    WebPicUtils.updatePicUrl(
-                        context,
-                        item.id,
-                        item.albumId,
-                        item.name,
-                        item.artist,
-                        callback = {
-                            Log.d("xxx", "MusicItem: " + it)
-                            coverUrl = it.first
-                        }
-                    )
-                },
-            string = coverUrl,
-            placeholder = R.drawable.ic_launcher_background,
-            error = R.drawable.ic_launcher_background
-        )
+//        GlideImage(
+//            modifier = Modifier
+//                .size(50.dp)
+//                .clickable {
+//                    WebPicUtils.updatePicUrl(
+//                        context,
+//                        item.id,
+//                        item.albumId,
+//                        item.name,
+//                        item.artist,
+//                        callback = {
+//                            Log.d("xxx", "MusicItem: " + it)
+//                            coverUrl = it.first
+//                        }
+//                    )
+//                },
+//            string = coverUrl,
+//            placeholder = R.drawable.ic_launcher_background,
+//            error = R.drawable.ic_launcher_background
+//        )
 //        GlideImage(
 //            modifier = Modifier.size(50.dp),
 //            string = coverUrl1,

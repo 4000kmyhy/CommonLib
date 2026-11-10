@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/lib_media" />
             <option value="$PROJECT_DIR$/lib_piano" />
             <option value="$PROJECT_DIR$/lib_retrofit" />
-            <option value="$PROJECT_DIR$/lib_web_pic" />
           </set>
         </option>
       </GradleProjectSettings>
